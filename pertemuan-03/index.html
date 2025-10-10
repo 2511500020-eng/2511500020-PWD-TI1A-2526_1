@@ -66,7 +66,8 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
         }
 
-        #contact form {
+        #contact p {
+            display: flex;
             flex-direction: column;
         }
 
@@ -108,17 +109,26 @@
         <section id="contact">
             <h2>Kontak Kami</h2>
             <form action="" method="GET">
-                <label for="txtNama">Nama:</label>
-                <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan nama" required autocomplete="name">
+                <p>
+                    <strong><label for="txtNama">Nama:</label>
+                    <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan nama" required autocomplete="name"></strong>
+                </p>
 
-                <label for="txtEmail">Email: </label>
-                <input type="text" id="txtEmail" name="txtEmail" placeholder="Masukkan email" required autocomplete="email">
+                <p>
+                    <strong><label for="txtEmail">Email: </label>
+                    <input type="text" id="txtEmail" name="txtEmail" placeholder="Masukkan email" required autocomplete="email"></strong>
+                </p>
+
+                <p>
+                    <strong><label for="txtPesan">Pesan: </label>
+                    <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..." required></textarea></strong>
+                </p>
+
+                <p>
+                    <strong><button type="submit">Kirim</button>
+                    <button type="reset">Batal</button></strong>
+                </p>
                 
-                <label for="txtPesan">Pesan: </label>
-                <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..." required></textarea>
-
-                <button type="submit">Kirim</button>
-                <button type="reset">Batal</button>
             </form>
         </section>
     </main>
