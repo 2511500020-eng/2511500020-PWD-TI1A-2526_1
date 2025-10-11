@@ -81,6 +81,11 @@
             padding: 6px 0;
         }
 
+        #contact p:last-child{
+            justify-content: center;
+            gap: 10px;
+        }
+
         #contact strong {
             min-width: 180px;
             color: rgb(54, 38, 31);
@@ -98,22 +103,22 @@
             width: 350px;
         }
 
-         @media (max-width: 600px){
+         @media (max-width: 500px){
             #contact p {
                 flex-direction: column;
                 align-items: flex-start;
+            }
+
+            #contact p:last-child{
+                display: flex;
+                justify-content: center;
+                gap: 10px;
             }
 
             #contact strong {
                 text-align: left;
                 margin-bottom: 2px;
             }
-        }
-
-        #contact p:last-child{
-            display: flex;
-            align-items: center;
-            gap: 10px;
         }
     </style>
 </head>
