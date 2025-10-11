@@ -44,7 +44,7 @@
             flex-shrink: 0;
         }
 
-        @media (max-width: 600px){
+        @media (max-width: 700px){
             #about p {
                 flex-direction: column;
                 align-items: flex-start;
@@ -103,19 +103,20 @@
             width: 350px;
         }
 
-         @media (max-width: 500px){
+         @media (max-width: 700px){
             #contact p {
                 flex-direction: column;
                 align-items: flex-start;
             }
 
             #contact p:last-child{
-                display: flex;
+                flex-direction: row;
                 justify-content: center;
                 gap: 10px;
             }
 
             #contact strong {
+                width: auto;
                 text-align: left;
                 margin-bottom: 2px;
             }
