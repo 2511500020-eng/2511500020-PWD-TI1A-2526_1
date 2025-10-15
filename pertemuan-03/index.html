@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Judul Halaman</title>
+    <title>pwd</title>
     <style>
         #about {
             background-color: rgba(222, 184, 135, 0.75);
@@ -15,14 +16,14 @@
         }
 
         #about h2 {
-            color:  rgb(54, 38, 31);
+            color: rgb(54, 38, 31);
             border-bottom: 2px solid rgb(88, 51, 42);
             padding-bottom: 6px;
             margin-top: 0;
-            margin-bottom: 16px; 
+            margin-bottom: 16px;
         }
 
-        #about p{
+        #about p {
             display: flex;
             justify-content: flex-start;
             align-items: baseline;
@@ -44,7 +45,7 @@
             flex-shrink: 0;
         }
 
-        @media (max-width: 600px){
+        @media (max-width: 600px) {
             #about p {
                 flex-direction: column;
                 align-items: flex-start;
@@ -57,7 +58,7 @@
             }
         }
 
-         #contact {
+        #contact {
             background-color: hsla(34, 59%, 56%, 0.75);
             border-radius: 10px;
             padding: 20px;
@@ -66,12 +67,12 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
         }
 
-        #contact h2{
-            color:  rgb(54, 38, 31);
+        #contact h2 {
+            color: rgb(54, 38, 31);
             border-bottom: 2px solid rgb(88, 51, 42);
             padding-bottom: 6px;
             margin-top: 0;
-            margin-bottom: 16px; 
+            margin-bottom: 16px;
         }
 
         #contact p {
@@ -81,7 +82,7 @@
             padding: 6px 0;
         }
 
-        #contact p:last-child{
+        #contact p:last-child {
             justify-content: center;
             gap: 10px;
         }
@@ -98,7 +99,6 @@
         #contact input {
             width: 350px;
             border-radius: 5px;
-
         }
 
         #contact textarea {
@@ -107,19 +107,26 @@
         }
 
         #contact button {
-            color:  hsl(0, 0%, 100%);
-            background-color:  rgb(88, 51, 42);
+            color: hsl(0, 0%, 100%);
+            background-color: rgb(88, 51, 42);
             border-radius: 5px;
             font-weight: 500;
         }
 
-         @media (max-width: 600px){
+        #contact button :hover{
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            background-color: rgb(222, 105, 38);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 600px) {
             #contact p {
                 flex-direction: column;
                 align-items: flex-start;
             }
 
-            #contact p:last-child{
+            #contact p:last-child {
                 flex-direction: row;
                 justify-content: center;
                 gap: 10px;
@@ -179,24 +186,27 @@
             <form action="" method="GET">
                 <p>
                     <strong><label for="txtNama">Nama:</label></strong>
-                    <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan nama" required autocomplete="name">
+                    <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan nama" required
+                        autocomplete="name">
                 </p>
 
                 <p>
                     <strong><label for="txtEmail">Email: </label></strong>
-                    <input type="text" id="txtEmail" name="txtEmail" placeholder="Masukkan email" required autocomplete="email">
+                    <input type="text" id="txtEmail" name="txtEmail" placeholder="Masukkan email" required
+                        autocomplete="email">
                 </p>
 
                 <p>
                     <strong><label for="txtPesan">Pesan: </label></strong>
-                    <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..." required></textarea>
+                    <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..."
+                        required></textarea>
                 </p>
 
                 <p>
                     <button type="submit">Kirim</button>
                     <button type="reset">Batal</button>
                 </p>
-                
+
             </form>
         </section>
     </main>
