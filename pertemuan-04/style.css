@@ -85,12 +85,14 @@
     width: 71%;
     padding: 6px;
     border-radius: 5px;
+    border: 1px solid rgb(88, 51, 42);
 }
 
 #contact textarea {
     width: 71%;
     padding: 6px;
     border-radius: 10px;
+    border: 1px solid rgb(88, 51, 42);
 }
 
 #contact button[type="reset"] {
@@ -98,6 +100,9 @@
     background-color: rgb(194, 193, 193);
     border-radius: 5px;
     font-weight: 500;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
 }
 
 #contact button[type="submit"] {
@@ -105,6 +110,9 @@
     background-color: rgb(88, 51, 42);
     border-radius: 5px;
     font-weight: 500;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
 }
 
 #contact button[type="reset"]:hover {
