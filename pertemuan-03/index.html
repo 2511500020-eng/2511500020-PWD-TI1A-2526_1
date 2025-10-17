@@ -15,7 +15,8 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
         }
 
-        #about h2 {
+        #about h2,
+        #contact h2 {
             color: rgb(54, 38, 31);
             border-bottom: 2px solid rgb(88, 51, 42);
             padding-bottom: 6px;
@@ -67,14 +68,6 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
         }
 
-        #contact h2 {
-            color: rgb(54, 38, 31);
-            border-bottom: 2px solid rgb(88, 51, 42);
-            padding-bottom: 6px;
-            margin-top: 0;
-            margin-bottom: 16px;
-        }
-
         #contact p {
             display: flex;
             align-items: baseline;
@@ -97,30 +90,37 @@
         }
 
         #contact input {
-            width: 350px;
+            width: 60%;
             border-radius: 5px;
         }
 
         #contact textarea {
-            width: 350px;
+            width: 60%;
             border-radius: 10px;
         }
 
-        #contact button {
+        #contact button[type="reset"] {
+            color: hsl(0, 0%, 0%);
+            background-color: rgb(194, 193, 193);
+            border-radius: 5px;
+            font-weight: 500;
+        }
+
+        #contact button[type="submit"] {
             color: hsl(0, 0%, 100%);
             background-color: rgb(88, 51, 42);
             border-radius: 5px;
             font-weight: 500;
         }
 
-        #contact button[type="submit"]:hover{
+        #contact button[type="reset"]:hover{
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-            background-color: rgb(178, 109, 69);
+            background-color: rgb(224, 224, 224);
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
             transform: translateY(-1px);
         }
 
-        #contact button[type="reset"]:hover{
+        #contact button[type="submit"]:hover{
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
             background-color: rgb(178, 109, 69);
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
@@ -210,8 +210,8 @@
                 </p>
 
                 <p>
-                    <button type="submit">Kirim</button>
                     <button type="reset">Batal</button>
+                    <button type="submit">Kirim</button>
                 </p>
 
             </form>
