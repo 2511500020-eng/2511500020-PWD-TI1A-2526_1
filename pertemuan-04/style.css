@@ -32,7 +32,7 @@ header li a {
 }
 
 header li a:hover {
-    background-color: rgba(222, 184, 135, 0.75);
+    background-color: rgb(178, 109, 69);
     border-radius: 6px;
     transition: background-color 0.3s ease;
 }
@@ -45,7 +45,7 @@ header li a:focus {
 }
 
 header li a:active {
-    background-color: hsla(34, 59%, 56%, 0.75);
+    background-color: hsl(34, 59%, 56%);
     transform: translateY(1px);
 }
 
