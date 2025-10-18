@@ -41,7 +41,7 @@ header li a:focus {
     outline: 2px solid #fff;
     outline-offset: 2px;
     border-radius: 6px;
-    background-color: rgba(218, 193, 162, 0.75);
+    background-color: rgb(218, 193, 162);
 }
 
 header li a:active {
