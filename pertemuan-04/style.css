@@ -202,3 +202,10 @@ header li a {
         width: 98%;
     }
 }
+
+footer {
+    background: #222;
+    color: #aaa;
+    text-align: center;
+    padding: 10px;
+}
