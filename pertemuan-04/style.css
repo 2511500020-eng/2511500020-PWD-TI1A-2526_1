@@ -74,7 +74,8 @@ header li a:active {
         display: block;
         padding: 12px 14px;
         border: 1px solid rgba white;
-        background: rgba(92, 68, 46, 0.75);
+        border-radius: 6px;
+        background: rgba(222, 184, 135, 0.75);
         backdrop-filter: saturate(120%);
     }
 }
