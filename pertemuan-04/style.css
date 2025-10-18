@@ -41,11 +41,11 @@ header li a:focus {
     outline: 2px solid #fff;
     outline-offset: 2px;
     border-radius: 6px;
-    background-color: rgb(216, 186, 150);
+    background-color: hsl(27, 30%, 34%);
 }
 
 header li a:active {
-    background-color: hsl(27, 30%, 34%);
+    background-color: rgb(216, 186, 150);
     transform: translateY(1px);
 }
 
