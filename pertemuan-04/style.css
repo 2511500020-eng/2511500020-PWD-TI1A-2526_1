@@ -53,7 +53,7 @@ header li a {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-#home,
+#home h2,
 #about h2,
 #contact h2 {
     color: rgb(54, 38, 31);
