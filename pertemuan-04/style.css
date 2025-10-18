@@ -6,12 +6,12 @@ body {
     margin: 0;
     font-family: arial, sans-serif;
     background: #f5f5f5;
-    color: #333;
+    color: #000000;
     line-height: 1.5;
 }
 
 header{
-    background: #8b796c;
+    background: rgb(88, 51, 42);
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -31,6 +31,19 @@ header li a {
     padding: 6px 12px;
 }
 
+#home {
+    background-color: rgba(218, 193, 162, 0.75);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 700px;
+    margin: 20px auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+#home p {
+    text-align: justify;
+}
+
 #about {
     background-color: rgba(222, 184, 135, 0.75);
     border-radius: 10px;
@@ -40,6 +53,7 @@ header li a {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
+#home,
 #about h2,
 #contact h2 {
     color: rgb(54, 38, 31);
