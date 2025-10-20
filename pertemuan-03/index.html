@@ -93,19 +93,20 @@
             font-weight: 600;
         }
 
-        #contact button[type="reset"]:hover{
+        #contact button[type="reset"]:hover {
             background-color: rgb(224, 224, 224);
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
             transform: translateY(-1px);
         }
 
-        #contact button[type="submit"]:hover{
+        #contact button[type="submit"]:hover {
             background-color: rgb(178, 109, 69);
             transform: translateY(-1px);
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
         }
 
         @media (max-width: 600px) {
+
             #about p,
             #contact label {
                 flex-direction: column;
@@ -166,7 +167,7 @@
                 <label for="txtNama">
                     <span>Nama:</span>
                     <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan nama" required
-                autocomplete="name">
+                        autocomplete="name">
                 </label>
 
                 <label for="txtEmail">
@@ -178,13 +179,13 @@
                 <label for="txtPesan">
                     <span>Pesan:</span>
                     <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..."
-                    required></textarea>
-                 </label>
+                        required></textarea>
+                </label>
 
-                 <center>
+                <center>
                     <button type="reset">Batal</button>
                     <button type="submit">Kirim</button>
-                 </center>
+                </center>
             </form>
         </section>
     </main>
