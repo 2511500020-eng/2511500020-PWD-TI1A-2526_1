@@ -200,6 +200,12 @@ footer {
         backdrop-filter: saturate(120%);
     }
 
+    #home,
+    #about,
+    #contact {
+        scroll-margin-top: 80px;
+    }
+
     #about p,
     #contact label {
         flex-direction: column;
