@@ -126,6 +126,11 @@ header li a:active {
     box-sizing: border-box;
 }
 
+.button {
+    display: flex;
+    justify-content: center;
+}
+
 #contact button {
     margin-top: 10px;
     display: inline-block;
@@ -223,5 +228,9 @@ footer {
     #contact textarea,
     #contact button {
         width: 100%;
+    }
+
+    .button {
+        flex-direction: column-reverse;
     }
 }
