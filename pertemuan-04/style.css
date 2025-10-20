@@ -1,4 +1,4 @@
-*{
+* {
     box-sizing: border-box;
 }
 
@@ -10,14 +10,14 @@ body {
     line-height: 1.5;
 }
 
-header{
+header {
     background: rgb(88, 51, 42);
     color: #fff;
     padding: 20px;
     text-align: center;
 }
 
-header ul{
+header ul {
     display: flex;
     justify-content: center;
     list-style: none;
@@ -171,14 +171,14 @@ footer {
 
 @media (max-width: 600px) {
 
-    header{
+    header {
         padding: 16px;
         position: sticky;
         top: 0;
         z-index: 1000;
     }
 
-     header h1 {
+    header h1 {
         margin: 0 0 8 px;
         font-size: 20px;
         line-height: 1.2;
@@ -191,7 +191,7 @@ footer {
         margin: 8px 0 0;
     }
 
-     header li a {
+    header li a {
         display: block;
         padding: 12px 14px;
         border: 1px solid rgba white;
