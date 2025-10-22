@@ -175,13 +175,21 @@ footer {
 }
 
 @media (max-width: 600px) {
-
     header {
         padding: 16px;
         position: sticky;
         top: 0;
         z-index: 1000;
     }
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+}
 
     header h1 {
         margin: 0 0 8 px;
