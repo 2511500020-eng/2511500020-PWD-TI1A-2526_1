@@ -1,1 +1,8 @@
 # pertemuan-05
+
+NIM: 2511500020<br>
+Nama: Widya Serena Mulyaputeri<br><br>
+Hari ini, Rabu 22 Oktober 2025, saya belajar:
+<ol>
+    <li>copy index.html dan style.css folder pertemuan-04</li>
+</ol>
