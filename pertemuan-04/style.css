@@ -174,14 +174,6 @@ footer {
     padding: 10px;
 }
 
-@media (max-width: 600px) {
-    header {
-        padding: 16px;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-    }
-
 .menu-toggle {
     display: none;
     background: none;
@@ -190,6 +182,14 @@ footer {
     font-size: 28px;
     cursor: pointer;
 }
+
+@media (max-width: 600px) {
+    header {
+        padding: 16px;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
 
     header h1 {
         margin: 0 0 8 px;
