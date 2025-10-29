@@ -45,6 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         applyResponsiveLayout();
     }
+
     function applyResponsiveLayout() {
         const label = document.querySelector('label[for="txtPesan"]');
         const span = label?.querySelector('span');
@@ -92,9 +93,10 @@ document.querySelector("form").addEventListener("submit", function (e) {
     const nama = document.getElementById("txtNama");
     const email = document.getElementById("txtEmail");
     const pesan = document.getElementById("txtPesan");
+    e.preventDefault();
+    let isValid = true;
     document.querySelectorAll(".error-msg").forEach(el => el.remove());
     [nama, email, pesan].forEach(el => el.style.border = "");
-    let isValid = true;
     if (nama.value.trim().length < 3) {
         showError(nama, "Nama minimal 3 huruf dan tidak boleh kosong.");
         isValid = false;
@@ -122,8 +124,9 @@ document.querySelector("form").addEventListener("submit", function (e) {
 
 function showError(inputElement, message) {
     const label = inputElement.closest("label");
-    if (!label) return;
-    label.style.flexWrap = "wrap";
+    const container = (label && label.contains(inputElement)) ? label : inputElement.parentNode;
+    if (!container) return;
+    if (label) label.style.flexWrap = "wrap";
     const small = document.createElement("small");
     small.className = "error-msg";
     small.textContent = message;
@@ -133,11 +136,8 @@ function showError(inputElement, message) {
     small.style.marginTop = "4px";
     small.style.flexBasis = "100%";
     small.dataset.forId = inputElement.id;
-    if (inputElement.nextSibling) {
-        label.insertBefore(small, inputElement.nextSibling);
-    } else {
-        label.appendChild(small);
-    }
+    const ref = (inputElement.nextSibling && inputElement.nextSibling.parentNode === container) ? inputElement.nextSibling : null;
+    container.insertBefore(small, ref);
     inputElement.style.border = "1px solid red";
     alignErrorMessage(small, inputElement);
 }
