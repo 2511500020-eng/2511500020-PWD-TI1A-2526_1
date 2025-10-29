@@ -1,7 +1,7 @@
 <?php
 $hobi = ["Menggambar", "Menghalu"]; //deklarasi variabel hobi tipe array dengan nilai "Menggambar", "Menghalu"
 echo "<h3>Daftar Hobi Saya:</h3>"; //cetak pesan "Daftar Hobi Saya:"
-for ($i = 0; $i < count($hobi); $i++) { //perulangan. deklarasi var i = 0, selagi i kurang dari jumlah item dalam hobi, maka nilai i akan ditambah 1
+for ($i = 0; $i < count($hobi); $i++) { //perulangan. deklarasi var i = 0, perulangan terjadi selagi i kurang dari jumlah item hobi dan nilai i akan ditambah 1
 echo ($i + 1) . ". " . $hobi[$i] . "<br>"; //isi perulangan: cetak [i + 1] sebagai nomor lalu dilanjut dengan hobi
 }
 echo "<hr>"; //cetak garis horizontal
