@@ -10,4 +10,5 @@ Hari ini, Rabu 22 Oktober 2025, saya belajar:
     <li>kumpulan latihan 1</li>
     <li>latihan variabel dan tipe data</li>
     <li>latihan tipe data</li>
+    <li>latihan konstanta</li>
 </ol>
