@@ -13,4 +13,5 @@ Hari ini, Rabu 22 Oktober 2025, saya belajar:
     <li>latihan konstanta</li>
     <li>latihan komentar</li>
     <li>latihan operator dasar</li>
+    <li>latihan operator perbandingan</li>
 </ol>
