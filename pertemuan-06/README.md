@@ -6,4 +6,5 @@ Hari ini, Rabu 22 Oktober 2025, saya belajar:
 <ol>
     <li>Hello.php</li>
     <li>index.php</li>
+    <li>variabel php ke section #about</li>
 </ol>
