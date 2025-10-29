@@ -14,5 +14,6 @@ Hari ini, Rabu 22 Oktober 2025, saya belajar:
     <li>latihan komentar</li>
     <li>latihan operator dasar</li>
     <li>latihan operator perbandingan</li>
-    <li>Latihan struktur kontrol percabangan</li>
+    <li>Latihan struktur kontrol percabangan1</li>
+    <li>Latihan struktur kontrol percabangan2</li>
 </ol>

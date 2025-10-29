@@ -1,9 +1,10 @@
-Latihan struktur kontrol percabangan:
 <?php
-$hari = "Senin"; //deklarasi variabel hari tipe string bernilai "Senin"
-switch ($hari) { //percabangan yg melihat nilai var hari
-case "Senin": echo "Awal Minggu!"; break; //jika nilai var hari "Senin" maka akan mencetak teks "Awal Minggu!" lalu percabangan berhenti
-case "Jumat": echo "Hampir weekend!"; break; //jika nilai var hari "Jumat" maka akan mencetak teks "Hampir weekend!" lalu percabangan berhenti
-default: echo "Hari biasa."; //jika nilai var bukan "Senin" ataupun "Jumat" maka akan mencetak teks "Hari biasa."
+$nilai = 80; //deklarasi variabel nilai tipe integer dengan nilai 80
+if ($nilai >= 90) { //jika nilai var nilai lebih dari atau sama dengan 90, maka:
+echo "A"; //cetak teks "A"
+} elseif ($nilai >= 80) { //sedangkan jika nilai var nilai lebih dari atau sama dengan 80, maka:
+echo "B"; //cetak teks "A"
+} else { //sedangkan jika nilai var nilai tidak sesuai dengan 2 kondisi percabangan di atas atau kurang dari 80, maka:
+echo "C"; //cetak teks "C"
 }
 ?>
