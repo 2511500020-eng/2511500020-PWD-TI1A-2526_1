@@ -99,6 +99,160 @@
             </p>
         </section>
 
+    <section id="ipk">
+        <?php
+            $namaMatkul1 = "Kalkulus";
+            $namaMatkul2 = "Logika Informatika";
+            $namaMatkul3 = "Pengantar Teknik Informatika";
+            $namaMatkul4 = "Aplikasi Perkantoran";
+            $namaMatkul5 = "Konsep Basis Data";
+            $sksMatkul1 = 3;
+            $sksMatkul2 = 3;
+            $sksMatkul3 = 3;
+            $sksMatkul4 = 3;
+            $sksMatkul5 = 3;
+            $nilaiHadir1 = 100;
+            $nilaiHadir2 = 100;
+            $nilaiHadir3 = 100;
+            $nilaiHadir4 = 100;
+            $nilaiHadir5 = 100;
+            $nilaiTugas1 = 90;
+            $nilaiTugas2 = 80;
+            $nilaiTugas3 = 90;
+            $nilaiTugas4 = 85;
+            $nilaiTugas5 = 90;
+            $nilaiUTS1 = 85;
+            $nilaiUTS2 = 80;
+            $nilaiUTS3 = 90;
+            $nilaiUTS4 = 95;
+            $nilaiUTS5 = 95;
+            $nilaiUAS1 = 90;
+            $nilaiUAS2 = 85;
+            $nilaiUAS3 = 90;
+            $nilaiUAS4 = 80;
+            $nilaiUAS5 = 90;
+
+            $nilaiAkhir1 = (0.1 * $nilaiHadir1) + (0.2 * $nilaiTugas1) + (0.3 * $nilaiUTS1) + (0.4 * $nilaiUAS1);
+            $nilaiAkhir2 = (0.1 * $nilaiHadir2) + (0.2 * $nilaiTugas2) + (0.3 * $nilaiUTS2) + (0.4 * $nilaiUAS2);
+            $nilaiAkhir3 = (0.1 * $nilaiHadir3) + (0.2 * $nilaiTugas3) + (0.3 * $nilaiUTS3) + (0.4 * $nilaiUAS3);
+            $nilaiAkhir4 = (0.1 * $nilaiHadir4) + (0.2 * $nilaiTugas4) + (0.3 * $nilaiUTS4) + (0.4 * $nilaiUAS4);
+            $nilaiAkhir5 = (0.1 * $nilaiHadir5) + (0.2 * $nilaiTugas5) + (0.3 * $nilaiUTS5) + (0.4 * $nilaiUAS5);
+
+            if ($nilaiHadir1 < 70) {
+                $grade1 = "E";
+            }
+            else {
+                if ($nilaiAkhir1 >= 0) {
+                    $grade1 = "E";
+                    $mutu1 = 0.00;
+                    $status1 = "GAGAL";
+                }
+                if ($nilaiAkhir1 >= 36) {
+                    $grade1 = "D";
+                    $mutu1 = 1.00;
+                    $status1 = "GAGAL";
+                }
+                if ($nilaiAkhir1 >= 51) {
+                    $grade1 = "C-";
+                    $mutu1 = 1.700;
+                    $status1 = "LULUS";
+                }
+                if ($nilaiAkhir1 >= 56) {
+                    $grade1 = "C";
+                    $mutu1 = 2.00;
+                    $status1 = "LULUS";
+                }
+                if ($nilaiAkhir1 >= 61) {
+                    $grade1 = "C+";
+                    $mutu1 = 2.30;
+                    $status1 = "LULUS";
+                }
+                if ($nilaiAkhir1 >= 66) {
+                    $grade1 = "B-";
+                    $mutu1 = 2.70;
+                    $status1 = "LULUS";
+                }
+                if ($nilaiAkhir1 >= 71) {
+                    $grade1 = "B";
+                    $mutu1 = 3.00;
+                    $status1 = "LULUS";
+                }
+                if ($nilaiAkhir1 >= 76) {
+                    $grade1 = "B+";
+                    $mutu1 = 3.30;
+                    $status1 = "LULUS";
+                }
+                if ($nilaiAkhir1 >= 81) {
+                    $grade1 = "A-";
+                    $mutu1 = 3.70;
+                    $status1 = "LULUS";
+                }
+                if ($nilaiAkhir1 >= 91) {
+                    $grade1 = "A";
+                    $mutu1 = 4.00;
+                    $status1 = "LULUS";
+                }
+            }
+
+        ?>
+
+        <h2>Nilai Saya</h2>
+        <p><strong>Nama Matakuliah ke-1:</strong>
+            <?php
+                echo $namaMatkul1;
+            ?>
+        </p>
+        <p><strong>SKS:</strong>
+            <?php
+                echo $sksMatkul1;
+            ?>
+        </p>
+        <p><strong>Kehadiran:</strong>
+            <?php
+                echo $nilaiHadir1;
+            ?>
+        </p>
+        <p><strong>Tugas:</strong>
+            <?php
+                echo $nilaiTugas1;
+            ?>
+        </p>
+        <p><strong>UTS:</strong>
+            <?php
+                echo $nilaiUTS1;
+            ?>
+        </p>
+        <p><strong>UAS:</strong>
+            <?php
+                echo $nilaiUAS1;
+            ?>
+        </p>
+        <p><strong>Nilai Akhir:</strong>
+            <?php
+                echo $nilaiAkhir1;
+            ?>
+        </p>
+        <p><strong>Grade:</strong>
+            <?php
+                echo $grade1;
+            ?>
+        </p>
+        <p><strong>Angka Mutu:</strong>
+            <?php
+                echo $mutu1;
+            ?>
+        </p>
+         <p><strong>STATUS:</strong>
+            <?php
+                echo $status1;
+            ?>
+        </p>
+
+            <hr>
+
+        
+    </section>
+
         <section id="contact">
             <h2>Kontak Kami</h2>
             <form action="" method="GET">
