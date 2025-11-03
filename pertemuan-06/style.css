@@ -101,7 +101,6 @@ header li a:active {
 }
 
 #about p,
-#ipk p,
 #contact label {
     display: flex;
     justify-content: flex-start;
@@ -111,9 +110,22 @@ header li a:active {
     border-bottom: 1px solid rgba(88, 51, 42, 0.5);
 }
 
-#about p:last-child,
-#ipk p:last-child {
+#about p:last-child {
     border-bottom: none;
+}
+
+#ipk p {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    margin: 0;
+    padding: 2px 0;
+}
+
+#ipk hr {
+    height: 2px;
+    background-color: rgba(88, 51, 42, 0.5);
+    border: none;
 }
 
 #about strong,
