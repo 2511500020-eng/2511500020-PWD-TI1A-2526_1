@@ -7,4 +7,5 @@ Hari ini, Rabu 5 November 2025, saya belajar:
     <li>copy file dari elearning (punya bapak) untuk pertemuan-07</li>
     <li>copy dan rename index.php jadi get.php lalu buat file baru namanya get_proses.php</li>
     <li>isi get_proses.php</li>
+    <li>session di get_proses.php</li>
 </ol>
