@@ -15,6 +15,56 @@ $sespesan = "";
 if (isset($_SESSION["sespesan"])):
   $sespesan = $_SESSION["sespesan"];
 endif;
+
+$sesnim = "";
+if (isset($_SESSION["sesnim"])):
+  $sesnim = $_SESSION["sesnim"];
+endif;
+
+$sesnamaLengkap = "";
+if (isset($_SESSION["sesnamaLengkap"])):
+  $sesnamaLengkap = $_SESSION["sesnamaLengkap"];
+endif;
+
+$sestempatLahir = "";
+if (isset($_SESSION["sestempatLahir"])):
+  $sestempatLahir = $_SESSION["sestempatLahir"];
+endif;
+
+$sestanggalLahir = "";
+if (isset($_SESSION["sestanggalLahir"])):
+  $sestanggalLahir = $_SESSION["sestanggalLahir"];
+endif;
+
+$seshobi = "";
+if (isset($_SESSION["seshobi"])):
+  $seshobi = $_SESSION["seshobi"];
+endif;
+
+$sespasangan = "";
+if (isset($_SESSION["sespasangan"])):
+  $sespasangan = $_SESSION["sespasangan"];
+endif;
+
+$sespekerjaan = "";
+if (isset($_SESSION["sespekerjaan"])):
+  $sespekerjaan = $_SESSION["sespekerjaan"];
+endif;
+
+$sesortu = "";
+if (isset($_SESSION["sesortu"])):
+  $sesortu = $_SESSION["sesortu"];
+endif;
+
+$seskakak = "";
+if (isset($_SESSION["seskakak"])):
+  $seskakak = $_SESSION["seskakak"];
+endif;
+
+$sesadik = "";
+if (isset($_SESSION["sesadik"])):
+  $sesadik = $_SESSION["sesadik"];
+endif;
 ?>
 
 <!DOCTYPE html>
@@ -101,18 +151,6 @@ endif;
       </form>
 
     <section id="about">
-      <?php
-      $nim = "2511500020";
-      $namaLengkap = "Widya Serena Mulyaputeri";
-      $tempatLahir = "Pangkalpinang";
-      $tanggalLahir = "10 September 2007";
-      $hobi = "Menggambar";
-      $pasangan = "Tidak ada";
-      $pekerjaan = "Mahasiswa di ISB Atma Luhur prodi Teknik Informatika";
-      $ortu = "Bapak Mulyadi dan Ibu Fong Siauw Yin";
-      $namaKakak = "-";
-      $namaAdik = "Nelsia Fadia Mulyaputeri";
-      ?>
       <h2>Tentang Saya</h2>
       <p><strong>NIM:</strong>
         <?php

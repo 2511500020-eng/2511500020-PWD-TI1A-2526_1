@@ -27,5 +27,8 @@ $_SESSION["sespekerjaan"] = $sespekerjaan;
 $_SESSION["sesortu"] = $sesortu;
 $_SESSION["seskakak"] = $seskakak;
 $_SESSION["sesadik"] = $sesadik;
+
+//echo $_SESSION["sesnim"] . " " . $_SESSION["sesnamaLengkap"] . " " . $_SESSION["pesan"];
+
 header("location: index.php");
 ?>
