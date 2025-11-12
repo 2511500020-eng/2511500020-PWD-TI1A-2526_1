@@ -116,52 +116,52 @@ endif;
       <h2>Tentang Saya</h2>
       <p><strong>NIM:</strong>
         <?php
-          echo $nim;
+          echo $sesnim;
         ?>
       </p>
       <p><strong>Nama Lengkap:</strong>
         <?php
-          echo $namaLengkap;
+          echo $sesnamaLengkap;
         ?> &#128526;
       </p>
       <p><strong>Tempat Lahir:</strong>
         <?php
-          echo $tempatLahir;
+          echo $sestempatLahir;
         ?>
       </p>
       <p><strong>Tanggal Lahir:</strong>
           <?php
-              echo $tanggalLahir;
+              echo $sestanggalLahir;
           ?>
       </p>
       <p><strong>Hobi:</strong>
           <?php
-              echo $hobi;
+              echo $seshobi;
           ?>
       </p>
       <p><strong>Pasangan:</strong>
           <?php
-              echo $pasangan;
+              echo $sespasangan;
           ?>
       </p>
       <p><strong>Pekerjaan:</strong>
           <?php
-              echo $pekerjaan;
+              echo $sespekerjaan;
           ?>
       </p>
       <p><strong>Nama Orang Tua:</strong>
           <?php
-              echo $ortu;
+              echo $sesortu;
           ?>
       </p>
       <p><strong>Nama Kakak:</strong>
           <?php
-              echo $namaKakak;
+              echo $seskakak;
           ?>
       </p>
       <p><strong>Nama Adik:</strong>
           <?php
-              echo $namaAdik;
+              echo $sesadik;
           ?>
       </p>
     </section>

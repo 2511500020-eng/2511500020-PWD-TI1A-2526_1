@@ -12,4 +12,5 @@ Proses saya mengerjakan UTS ini sebagai berikut:<br>
   <li>copy paste section #contact ke atas section #about dan ganti menjadi section #pendaftaran</li>
   <li>mengatur style section #pendaftaran mengikuti section #contact</li>
   <li>membuat session di file proses.php berdasarkan 10 variabel dari section #pendaftaran</li>
+  <li>mengeluarkan variabel ses di section #about tapi masih error karena undifined</li>
 </ol>
