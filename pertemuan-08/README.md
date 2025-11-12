@@ -10,4 +10,5 @@ Proses saya mengerjakan UTS ini sebagai berikut:<br>
   <li>membuat variabel2 sesuai section #about menggunakan variabel php</li>
   <li>mengeluarkan variabel php di section #about menggunakan echo</li>
   <li>copy paste section #contact ke atas section #about dan ganti menjadi section #pendaftaran</li>
+  <li>mengatur style section #pendaftaran mengikuti section #contact</li>
 </ol>

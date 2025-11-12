@@ -50,6 +50,7 @@ header li a:active {
 }
 
 #home:target~header nav a[href="#home"],
+#pendaftaran:target~header nav a[href="#contact"],
 #about:target~header nav a[href="#about"],
 #contact:target~header nav a[href="#contact"] {
   background: #fff;
@@ -60,6 +61,7 @@ header li a:active {
 }
 
 #home,
+#pendaftaran,
 #about,
 #contact {
   background-color: #ffffff;
@@ -71,6 +73,7 @@ header li a:active {
 }
 
 #home h2,
+#pendaftaran h2,
 #about h2,
 #contact h2 {
   color: #003366;
@@ -84,6 +87,7 @@ header li a:active {
   text-align: justify;
 }
 
+#pendaftaran label,
 #about p,
 #contact label {
   display: flex;
@@ -94,6 +98,7 @@ header li a:active {
   border-bottom: 1px solid #e6e6e6;
 }
 
+#pendaftaran label>span,
 #about strong,
 #contact label>span {
   min-width: 180px;
@@ -104,6 +109,8 @@ header li a:active {
   flex-shrink: 0;
 }
 
+#pendaftaran input,
+#pendaftaran textarea,
 #contact input,
 #contact textarea {
   flex: 1;
@@ -116,6 +123,7 @@ header li a:active {
   box-sizing: border-box;
 }
 
+#pendaftaran button,
 #contact button {
   margin-top: 10px;
   display: inline-block;
@@ -128,24 +136,28 @@ header li a:active {
   margin-right: 8px;
 }
 
+#pendaftaran button[type="submit"],
 #contact button[type="submit"] {
   background-color: #003366;
   color: #fff;
   font-weight: 600;
 }
 
+#pendaftaran button[type="reset"],
 #contact button[type="reset"] {
   background-color: #b4b4b4;
   color: #272727;
   font-weight: 500;
 }
 
+#pendaftaran button[type="submit"]:hover,
 #contact button[type="submit"]:hover {
   background-color: #0379ee;
   transform: translateY(-1px);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
+#pendaftaran button[type="reset"]:hover,
 #contact button[type="reset"]:hover {
   background-color: #cccccc;
   transform: translateY(-1px);
@@ -215,12 +227,14 @@ footer {
     backdrop-filter: saturate(120%);
   }
 
+  #pendaftaran label,
   #about p,
   #contact label {
     flex-direction: column;
     align-items: flex-start;
   }
 
+  #pendaftaran label>span,
   #about strong,
   #contact label>span {
     text-align: left;
@@ -228,6 +242,9 @@ footer {
     margin-bottom: 2px;
   }
 
+  #pendaftaran input,
+  #pendaftaran textarea,
+  #pendaftaran button,
   #contact input,
   #contact textarea,
   #contact button {
