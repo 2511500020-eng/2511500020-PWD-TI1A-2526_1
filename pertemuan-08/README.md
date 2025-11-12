@@ -8,4 +8,5 @@ Proses saya mengerjakan UTS ini sebagai berikut:<br>
 <ol>
   <li>ekstrak bahan uts ke folder pertemuan-08</li>
   <li>membuat variabel2 sesuai section #about menggunakan variabel php</li>
+  <li>mengeluarkan variabel php di section #about menggunakan echo</li>
 </ol>
