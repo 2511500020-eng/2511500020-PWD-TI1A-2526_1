@@ -122,11 +122,11 @@ header li a:active {
     padding: 2px 0;
 }
 
-#ipk hr {
+/*#ipk hr {
     height: 2px;
     background-color: rgba(88, 51, 42, 0.5);
     border: none;
-}
+}*/
 
 #about strong,
 #contact label>span {
