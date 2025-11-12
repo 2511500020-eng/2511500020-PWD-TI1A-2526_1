@@ -7,4 +7,5 @@ Kelompok: TI1A<br>
 Proses saya mengerjakan UTS ini sebagai berikut:<br>
 <ol>
   <li>ekstrak bahan uts ke folder pertemuan-08</li>
+  <li>membuat variabel2 sesuai section #about menggunakan variabel php</li>
 </ol>

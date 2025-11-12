@@ -54,21 +54,26 @@ endif;
 
     <section id="about">
       <?php
-      $nim = 2511500010;
-      $NIM = '0344300002';
-      $nama = "Say'yid Abdullah";
-      $Nama = 'Al\'kautar Benyamin';
-      $tempat = "Jebus";
+      $nim = "2511500020";
+      $nama = "Widya Serena Mulyaputeri";
+      $tempatLahir = "Pangkalpinang";
+      $tanggalLahir = "10 September 2007";
+      $hobi = "Menggambar";
+      $pasangan = "Tidak ada";
+      $pekerjaan = "Mahasiswa di ISB Atma Luhur prodi Teknik Informatika";
+      $ortu = "Bapak Mulyadi dan Ibu Fong Siauw Yin";
+      $namaKakak = "-";
+      $namaAdik = "Nelsia Fadia Mulyaputeri";
       ?>
       <h2>Tentang Saya</h2>
       <p><strong>NIM:</strong>
         <?php
-        echo $NIM;
+        echo $nim;
         ?>
       </p>
       <p><strong>Nama Lengkap:</strong>
         <?php
-        echo $Nama;
+        echo $nama;
         ?> &#128526;
       </p>
       <p><strong>Tempat Lahir:</strong> <?php echo $tempat; ?></p>
