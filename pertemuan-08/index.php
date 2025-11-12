@@ -175,7 +175,7 @@ endif;
       <p><strong>Hobi:</strong>
           <?php
               echo $seshobi;
-          ?>
+          ?> &#128516;
       </p>
       <p><strong>Pasangan:</strong>
           <?php
@@ -185,7 +185,7 @@ endif;
       <p><strong>Pekerjaan:</strong>
           <?php
               echo $sespekerjaan;
-          ?>
+          ?> &#128077;
       </p>
       <p><strong>Nama Orang Tua:</strong>
           <?php

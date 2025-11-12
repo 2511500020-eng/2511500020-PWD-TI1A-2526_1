@@ -15,4 +15,5 @@ Proses saya mengerjakan UTS ini sebagai berikut:<br>
   <li>mengeluarkan variabel ses di section #about tapi masih error karena undifined</li>
   <li>mengatur isset variabel2 ses</li>
   <li>membuat form id untuk form daftar dan form cotact untuk mengedit javascript</li>
+  <li>nambah emot</li>
 </ol>
