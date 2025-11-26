@@ -8,4 +8,5 @@ Belajar:<br>
 <br>
 <ol>
   <li>ekstrak file dari bapak ke pertemuan-09</li>
+  <li>Modif baris kode 10-19 file proses.php menjadi bentuk array associative</li>
 </ol>
