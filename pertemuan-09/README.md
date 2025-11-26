@@ -14,4 +14,5 @@ Belajar:<br>
   <li>foreach</li>
   <li>hapus yang lama</li>
   <li>file fungsi.php</li>
+  <li>fungsi formatTangggal</li>
 </ol>
