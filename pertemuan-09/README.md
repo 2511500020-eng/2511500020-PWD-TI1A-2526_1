@@ -15,4 +15,5 @@ Belajar:<br>
   <li>hapus yang lama</li>
   <li>file fungsi.php</li>
   <li>fungsi formatTangggal</li>
+  <li>fungsi tampilkanBiodata</li>
 </ol>
