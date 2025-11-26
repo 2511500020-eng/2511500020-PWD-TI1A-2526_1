@@ -17,4 +17,5 @@ Belajar:<br>
   <li>fungsi formatTangggal</li>
   <li>fungsi tampilkanBiodata</li>
   <li>tampilkanBiodata di section about</li>
+  <li>require once</li>
 </ol>

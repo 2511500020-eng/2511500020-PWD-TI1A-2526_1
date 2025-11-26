@@ -1,3 +1,4 @@
+Ketikkan kode berikut ini:
 <?php
 function bersihkan($str)
 {
@@ -21,7 +22,6 @@ function tampilkanBiodata($conf, $arr)
         $label = $v["label"];
         $nilai = bersihkan($arr[$k] ?? '');
         $suffix = $v["suffix"];
-
         $html .= "<p><strong>{$label}</strong> {$nilai}{$suffix}</p>";
     }
     return $html;
