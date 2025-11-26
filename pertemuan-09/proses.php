@@ -8,7 +8,7 @@ $_SESSION["sesemail"] = $sesemail;
 $_SESSION["sespesan"] = $sespesan;
 
 $arrBiodata = [
-    "nim" => $_POST[txtNim] ?? "",
+    "nim" => $_POST["txtNim"] ?? "",
     "nama" => $_POST["txtNmLengkap"] ?? "",
     "tempat" => $_POST["txtT4Lhr"] ?? "",
     "tanggal" => $_POST["txtTglLhr"] ?? "",
@@ -20,16 +20,12 @@ $arrBiodata = [
     "adik" => $_POST["txtNmAdik"] ?? ""
 ];
 
-$txtNim = $_POST["txtNim"];
-$txtNmLengkap = $_POST["txtNmLengkap"];
-$txtT4Lhr = $_POST["txtT4Lhr"];
-$txtTglLhr = $_POST["txtTglLhr"];
-$txtHobi = $_POST["txtHobi"];
-$txtPasangan = $_POST["txtPasangan"];
-$txtKerja = $_POST["txtKerja"];
-$txtNmOrtu = $_POST["txtNmOrtu"];
-$txtNmKakak = $_POST["txtNmKakak"];
-$txtNmAdik = $_POST["txtNmAdik"];
+foreach ($dataBiodata as $k => $v) {
+    echo "<p><strong>$k</strong>: $v</p>";
+}
+
+$_SESSION["biodata"] = $arrBiodata;
+header("location: index.php#contact");
 
 $_SESSION["txtNim"] = $txtNim;
 $_SESSION["txtNmLengkap"] = $txtNmLengkap;
