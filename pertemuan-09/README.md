@@ -16,4 +16,5 @@ Belajar:<br>
   <li>file fungsi.php</li>
   <li>fungsi formatTangggal</li>
   <li>fungsi tampilkanBiodata</li>
+  <li>tampilkanBiodata di section about</li>
 </ol>
