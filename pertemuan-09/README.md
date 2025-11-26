@@ -11,4 +11,5 @@ Belajar:<br>
   <li>Modif baris kode 10-19 file proses.php menjadi bentuk array associative</li>
   <li>session</li>
   <li>field config</li>
+  <li>foreach</li>
 </ol>
