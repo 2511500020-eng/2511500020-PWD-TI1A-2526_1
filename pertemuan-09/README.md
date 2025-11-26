@@ -12,4 +12,5 @@ Belajar:<br>
   <li>session</li>
   <li>field config</li>
   <li>foreach</li>
+  <li>hapus yang lama</li>
 </ol>
