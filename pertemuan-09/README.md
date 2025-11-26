@@ -13,4 +13,5 @@ Belajar:<br>
   <li>field config</li>
   <li>foreach</li>
   <li>hapus yang lama</li>
+  <li>file fungsi.php</li>
 </ol>
