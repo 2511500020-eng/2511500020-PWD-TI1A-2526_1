@@ -1,22 +1,6 @@
 <?php
 session_start();
-
 require_once __DIR__ . '/fungsi.php';
-
-$sesnama = "";
-if (isset($_SESSION["sesnama"])):
-  $sesnama = $_SESSION["sesnama"];
-endif;
-
-$sesemail = "";
-if (isset($_SESSION["sesemail"])):
-  $sesemail = $_SESSION["sesemail"];
-endif;
-
-$sespesan = "";
-if (isset($_SESSION["sespesan"])):
-  $sespesan = $_SESSION["sespesan"];
-endif;
 ?>
 
 <!DOCTYPE html>
@@ -108,12 +92,12 @@ endif;
 
     $fieldConfig = [
       "nim" => ["label" => "NIM:", "suffix" => ""],
-      "nama" => ["label" => "Nama Lengkap:", "suffix" => ""],
+      "nama" => ["label" => "Nama Lengkap:", "suffix" => " &#128526;"],
       "tempat" => ["label" => "Tempat Lahir:", "suffix" => ""],
       "tanggal" => ["label" => "Tanggal Lahir:", "suffix" => ""],
-      "hobi" => ["label" => "Hobi:", "suffix" => ""],
-      "pasangan" => ["label" => "Pasangan:", "suffix" => ""],
-      "pekerjaan" => ["label" => "Pekerjaan:", "suffix" => ""],
+      "hobi" => ["label" => "Hobi:", "suffix" => " &#127926;"],
+      "pasangan" => ["label" => "Pasangan:", "suffix" => " &hearts;"],
+      "pekerjaan" => ["label" => "Pekerjaan:", "suffix" => " &copy; 2025"],
       "ortu" => ["label" => "Nama Orang Tua:", "suffix" => ""],
       "kakak" => ["label" => "Nama Kakak:", "suffix" => ""],
       "adik" => ["label" => "Nama Adik:", "suffix" => ""],
@@ -124,6 +108,16 @@ endif;
       <h2>Tentang Saya</h2>
       <?= tampilkanBiodata($fieldConfig, $biodata); ?>
     </section>
+
+    <?php
+    $pengirim = $_SESSION["pengirim"] ?? [];
+
+    $FieldConfig = [
+      "Nama" => ["label" => "Nama:", "suffix" => ""],
+      "Email" => ["label" => "Email:", "suffix" => ""],
+      "Pesan" => ["label" => "Pesan:", "suffix" => ""],
+    ];
+    ?>
 
     <section id="contact">
       <h2>Kontak Kami</h2>
@@ -146,15 +140,17 @@ endif;
         <button type="reset">Batal</button>
       </form>
 
-      <?php if (!empty($sesnama)): ?>
+      <?php if (!empty($pengirim)): ?>
         <br><hr>
         <h2>Yang menghubungi kami</h2>
-        <p><strong>Nama :</strong> <?php echo $sesnama ?></p>
-        <p><strong>Email :</strong> <?php echo $sesemail ?></p>
-        <p><strong>Pesan :</strong> <?php echo $sespesan ?></p>
+        <?php foreach ($FieldConfig as $Kunci => $Metadata): ?>
+          <p>
+            <strong><?= $Metadata["label"] ?></strong>
+            <?= htmlspecialchars($pengirim[$Kunci] ?? "") ?>
+            <?= $Metadata["suffix"] ?>
+          </p>
+        <?php endforeach; ?>
       <?php endif; ?>
-
-
 
     </section>
   </main>

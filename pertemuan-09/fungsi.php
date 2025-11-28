@@ -1,4 +1,3 @@
-Ketikkan kode berikut ini:
 <?php
 function bersihkan($str)
 {
