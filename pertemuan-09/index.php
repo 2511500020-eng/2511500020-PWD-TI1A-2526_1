@@ -143,13 +143,7 @@ require_once __DIR__ . '/fungsi.php';
       <?php if (!empty($pengirim)): ?>
         <br><hr>
         <h2>Yang menghubungi kami</h2>
-        <?php foreach ($FieldConfig as $Kunci => $Metadata): ?>
-          <p>
-            <strong><?= $Metadata["label"] ?></strong>
-            <?= htmlspecialchars($pengirim[$Kunci] ?? "") ?>
-            <?= $Metadata["suffix"] ?>
-          </p>
-        <?php endforeach; ?>
+        <?= tampilkanBiodata($FieldConfig, $pengirim); ?>
       <?php endif; ?>
 
     </section>
