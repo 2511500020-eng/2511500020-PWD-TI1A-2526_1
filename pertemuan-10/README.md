@@ -11,4 +11,5 @@ Belajar:<br>
     <li>buat file koneksi.php</li>
     <li>buat mysqli koneksi gagal</li>
     <li>masang PHPMyAdmin</li>
+    <li>membuat database db_pwd2025</li>
 </ol>
