@@ -12,4 +12,5 @@ Belajar:<br>
     <li>buat mysqli koneksi gagal</li>
     <li>masang PHPMyAdmin</li>
     <li>membuat database db_pwd2025</li>
+    <li>membuat tabel tbl_tamu dalam database</li>
 </ol>
