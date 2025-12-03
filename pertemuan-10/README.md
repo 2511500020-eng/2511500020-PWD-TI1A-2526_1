@@ -10,4 +10,5 @@ Belajar:<br>
     <li>ekstrak file pertemuan 10 dan hapus index.html</li>
     <li>buat file koneksi.php</li>
     <li>buat mysqli koneksi gagal</li>
+    <li>masang PHPMyAdmin</li>
 </ol>
