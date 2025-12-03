@@ -16,4 +16,5 @@ Belajar:<br>
     <li>membuat read.php dan menampilkan kolom ID, Nama, Email, dan Pesan</li>
     <li>membuat 3 record dalam tabel tbl_tamu</li>
     <li>copy read.php dan rename jadi read_inc.php dan modif codenya</li>
+    <li>mengeluarkan read_inc.php pada section contact index.php</li>
 </ol>

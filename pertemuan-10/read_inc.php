@@ -15,7 +15,7 @@ if (!$q) {
     echo "<p>Belum ada data tamu yang tersimpan.</p>";
 } else {
     while ($row = mysqli_fetch_assoc($q)) {
-        $arrcontact = [
+        $arrContact = [
             "nama" => $row["cnama"] ?? "",
             "email" => $row["cemail"] ?? "",
             "pesan" => $row["cpesan"] ?? "",
@@ -24,20 +24,3 @@ if (!$q) {
     }
 }
 ?>
-<table border="1" cellpadding="8" cellspacing="0">
-    <tr>
-        <th>ID</th>
-        <th>Nama</th>
-        <th>Email</th>
-        <th>Pesan</th>
-    </tr>
-
-    <?php while ($row = mysqli_fetch_assoc($q)): ?>
-        <tr>
-            <td><?= $row['cid']; ?></td>
-            <td><?= htmlspecialchars($row['cnama']); ?></td>
-            <td><?= htmlspecialchars($row['cemail']); ?></td>
-            <td><?= nl2br(htmlspecialchars($row['cpesan'])); ?></td>
-        </tr>
-    <?php endwhile; ?>
-</table>
