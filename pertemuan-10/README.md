@@ -7,5 +7,6 @@ Kelompok: TI1A<br>
 Belajar:<br>
 <br>
 <ol>
-    <li>ekstrak file pertemuan 10</li>
+    <li>ekstrak file pertemuan 10 dan hapus index.html</li>
+    <li>buat file kooneksi.php</li>
 </ol>
