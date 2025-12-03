@@ -13,4 +13,5 @@ Belajar:<br>
     <li>masang PHPMyAdmin</li>
     <li>membuat database db_pwd2025</li>
     <li>membuat tabel tbl_tamu dalam database</li>
+    <li>membuat read.php dan menampilkan kolom ID, Nama, Email, dan Pesan</li>
 </ol>
