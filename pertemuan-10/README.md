@@ -14,4 +14,5 @@ Belajar:<br>
     <li>membuat database db_pwd2025</li>
     <li>membuat tabel tbl_tamu dalam database</li>
     <li>membuat read.php dan menampilkan kolom ID, Nama, Email, dan Pesan</li>
+    <li>membuat 3 record dalam tabel tbl_tamu</li>
 </ol>
