@@ -9,4 +9,5 @@ Telah:<br>
 <ol>
     <li>copy paste file pertemuan-10 ke dalam folder pertemuan-11</li>
     <li>fungsi redirect</li>
+    <li>penangkap pesan sukses/gagal</li>
 </ol>
