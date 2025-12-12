@@ -11,4 +11,5 @@ Telah:<br>
     <li>fungsi redirect</li>
     <li>penangkap pesan sukses/gagal</li>
     <li>tampilkan flash message sukses</li>
+    <li>tampilkan flash message error</li>
 </ol>
