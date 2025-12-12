@@ -8,4 +8,5 @@ Telah:<br>
 <br>
 <ol>
     <li>copy paste file pertemuan-10 ke dalam folder pertemuan-11</li>
+    <li>fungsi redirect</li>
 </ol>
