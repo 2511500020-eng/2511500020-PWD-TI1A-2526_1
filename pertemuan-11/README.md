@@ -12,4 +12,5 @@ Telah:<br>
     <li>penangkap pesan sukses/gagal</li>
     <li>tampilkan flash message sukses</li>
     <li>tampilkan flash message error</li>
+    <li>old nama, email, pesan</li>
 </ol>
