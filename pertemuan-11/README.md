@@ -15,4 +15,5 @@ Telah:<br>
     <li>old nama, email, pesan</li>
     <li>rewrite proses.php</li>
     <li>nambah kolom no di read.php</li>
+    <li>syarat minimal karakter nama dan pesan</li>
 </ol>
