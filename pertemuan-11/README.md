@@ -14,4 +14,5 @@ Telah:<br>
     <li>tampilkan flash message error</li>
     <li>old nama, email, pesan</li>
     <li>rewrite proses.php</li>
+    <li>nambah kolom no di read.php</li>
 </ol>
