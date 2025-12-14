@@ -17,4 +17,5 @@ Telah:<br>
     <li>nambah kolom no di read.php</li>
     <li>syarat minimal karakter nama dan pesan</li>
     <li>captcha</li>
+    <li>bikin field dcreated_at</li>
 </ol>
