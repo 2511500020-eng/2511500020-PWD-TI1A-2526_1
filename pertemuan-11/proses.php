@@ -12,6 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 $nama = bersihkan($_POST['txtNama'] ?? '');
 $email = bersihkan($_POST['txtEmail'] ?? '');
 $pesan = bersihkan($_POST['txtPesan'] ?? '');
+$captcha = bersihkan($_POST['txtCaptcha'] ?? '');
 
 $errors = [];
 
@@ -33,11 +34,16 @@ if ($pesan === '') {
   $errors[] = 'Pesan minimal 10 karakter.';
 }
 
+if ($captcha != 5) {
+  $errors[] = 'Captcha salah.';
+}
+
 if (!empty($errors)) {
   $_SESSION['old'] = [
     'nama' => $nama,
     'email' => $email,
     'pesan' => $pesan,
+    'captcha' => $captcha,
   ];
 
   $_SESSION['flash_error'] = implode('<br>', $errors);
@@ -63,6 +69,7 @@ if (mysqli_stmt_execute($stmt)) {
     'nama' => $nama,
     'email' => $email,
     'pesan' => $pesan,
+    'captcha' => $captcha,
   ];
   $_SESSION['flash_error'] = 'Data gagal disimpan. Silakan coba lagi.';
   redirect_ke('index.php#contact');
@@ -73,7 +80,7 @@ mysqli_stmt_close($stmt);
 $arrContact = [
   "nama" => $_POST["txtNama"] ?? "",
   "email" => $_POST["txtEmail"] ?? "",
-  "pesan" => $_POST["txtPesan"] ?? ""
+  "pesan" => $_POST["txtPesan"] ?? "",
 ];
 $_SESSION["contact"] = $arrContact;
 
