@@ -148,7 +148,7 @@ require_once __DIR__ . '/fungsi.php';
         </label>
 
         <label for="txtCaptcha"><span>2 + 3 =</span>
-          <input id="txtCaptcha" name="txtCaptcha" placeholder="Tulis jawaban anda..." required value="<?= isset($old['captcha']) ? htmlspecialchars($old['captcha']) : '' ?>">
+          <input type="number" id="txtCaptcha" name="txtCaptcha" placeholder="Tulis jawaban anda..." required value="<?= isset($old['captcha']) ? htmlspecialchars($old['captcha']) : '' ?>">
         </label>
 
         <button type="submit">Kirim</button>

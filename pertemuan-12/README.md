@@ -11,4 +11,5 @@ Telah:<br>
     <li>buat kolom aksi</li>
     <li>buat link edit</li>
     <li>bikin penampil flash sukses dan flash error di read.php</li>
+    <li>buat file edit.php dan isinya</li>
 </ol>
