@@ -12,4 +12,5 @@ Telah:<br>
     <li>buat link edit</li>
     <li>bikin penampil flash sukses dan flash error di read.php</li>
     <li>buat file edit.php dan isinya</li>
+    <li>buat file proses_update.php dan isinya</li>
 </ol>
