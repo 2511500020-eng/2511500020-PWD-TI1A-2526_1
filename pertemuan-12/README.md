@@ -9,4 +9,5 @@ Telah:<br>
 <ol>
     <li>copy paste file2 di pertemuan-11 ke pertemuan-12</li>
     <li>buat kolom aksi</li>
+    <li>buat link edit</li>
 </ol>
