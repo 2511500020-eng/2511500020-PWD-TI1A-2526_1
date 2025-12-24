@@ -10,5 +10,5 @@ Telah:<br>
     <li>download file2 pertemuan 13 bapak</li>
     <li>drop database pwd</li>
     <li>import file sql pwd</li>
-
+    <li>buat opsi delete di read.php</li>
 </ol>
