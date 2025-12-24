@@ -12,4 +12,5 @@ Telah:<br>
     <li>import file sql pwd</li>
     <li>buat opsi delete di read.php</li>
     <li>buat file proses_delete.php</li>
+    <li>copas isi file proses update ke proses delete</li>
 </ol>
