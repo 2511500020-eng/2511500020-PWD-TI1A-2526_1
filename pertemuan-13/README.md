@@ -11,4 +11,5 @@ Telah:<br>
     <li>drop database pwd</li>
     <li>import file sql pwd</li>
     <li>buat opsi delete di read.php</li>
+    <li>buat file proses_delete.php</li>
 </ol>
