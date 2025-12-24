@@ -15,4 +15,5 @@ Telah:<br>
     <li>copas isi file proses update ke proses delete</li>
     <li>edit isi file proses_delete.php</li>
     <li>nambah parameter cid di link delete read.php</li>
+    <li>edit file delete_proses.php agar pakai cid</li>
 </ol>
