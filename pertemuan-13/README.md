@@ -9,5 +9,6 @@ Telah:<br>
 <ol>
     <li>download file2 pertemuan 13 bapak</li>
     <li>drop database pwd</li>
+    <li>import file sql pwd</li>
 
 </ol>
