@@ -17,4 +17,5 @@ Telah:<br>
     <li>nambah parameter cid di link delete read.php</li>
     <li>edit file delete_proses.php agar pakai cid</li>
     <li>nambah konfirmasi hapus</li>
+    <li>tambah keterangan nama di konfirmasi hapus</li>
 </ol>
