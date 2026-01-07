@@ -12,4 +12,5 @@ Telah:<br>
     <li>isi record dlm tabel</li>
     <li>isi record dlm tabel</li>
     <li>hapus file index.html</li>
+    <li>copy paste file read.php dan rename jd read_bio_php</li>
 </ol>
