@@ -38,5 +38,6 @@ Telah:<br>
     <li>copy paste file edit.php dan rename jadi edit_bio.php</li>
     <li>aktifin kolom aksi dan ganti tujuan link edit ke edit bio dan delete ke delete bio dan ganti var cid jadi id(sesuai tbl_biodata)</li>
     <li>edit file edit_bio.php agar sesuai dengan form biodata beserta variabelnya</li>
-    <li>ganti tujuan ke read.php jadi ke read_bio.php</li>
+    <li>ganti semua tujuan ke read.php jadi ke read_bio.php</li>
+    <li>ganti variabel proses_update_bio,php agar sesuai biodata dan ganti tujuan rediect ke read_bio.php atau edit_bio.php (sesuai sikon)</li>
 </ol>
