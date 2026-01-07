@@ -29,4 +29,5 @@ Telah:<br>
     <li>bikin validasi kakak ga boleh kosong</li>
     <li>bikin validasi adik ga boleh kosong</li>
     <li>ganti if error not empty session old array nya sesuai dengan 10 variabel biodata</li>
+    <li>ganti insert into tbl_tamu jadi tbl_biodata sesuai dengan 10 variabelnya</li>
 </ol>

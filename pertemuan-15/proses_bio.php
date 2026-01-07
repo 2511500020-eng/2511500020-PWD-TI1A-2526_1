@@ -91,7 +91,7 @@ if (!empty($errors)) {
 }
 
 #menyiapkan query INSERT dengan prepared statement
-$sql = "INSERT INTO tbl_tamu (cnama, cemail, cpesan) VALUES (?, ?, ?)";
+$sql = "INSERT INTO tbl_biodata (nim, namalengkap, tempat, tanggal, hobi, pekerjaan, pasangan, ortu, kakak, adik) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 $stmt = mysqli_prepare($conn, $sql);
 
 if (!$stmt) {
