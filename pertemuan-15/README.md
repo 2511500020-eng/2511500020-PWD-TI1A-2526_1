@@ -47,4 +47,5 @@ Telah:<br>
     <li>kolom waktu dibuat</li>
     <li>kolom terakhir diubah dan edit fungsi format tanggal biar klo kosong ya kosong bukan 1 jam 1970</li>
     <li>misahin var flash dan old untuk bio</li>
+    <li>captcha untuk bio dan edit bio</li>
 </ol>

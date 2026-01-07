@@ -69,20 +69,20 @@
   $adik = $row["adik"] ?? "";
 
   #Ambil error dan nilai old input kalau ada
-  $flash_error = $_SESSION['flash_error'] ?? '';
+  $flash_error_bio = $_SESSION['flash_error_bio'] ?? '';
   $old_bio = $_SESSION['old_bio'] ?? [];
-  unset($_SESSION['flash_error'], $_SESSION['old_bio']);
+  unset($_SESSION['flash_error_bio'], $_SESSION['old_bio']);
   if (!empty($old_bio)) {
-    $nim = $row["nim"] ?? $nim;
-    $namalengkap = $row["namalengkap"] ?? $namalengkap;
-    $tempat = $row["tempat"] ?? $tempat;
-    $tanggal = $row["tanggal"] ?? $tanggal;
-    $hobi = $row["hobi"] ?? $hobi;
-    $pasangan = $row["pasangan"] ?? $pasangan;
-    $pekerjaan = $row["pekerjaan"] ?? $pekerjaan;
-    $ortu = $row["ortu"] ?? $ortu;
-    $kakak = $row["kakak"] ?? $kakak;
-    $adik = $row["adik"] ?? $adik;
+    $nim = $old_bio["nim"] ?? $nim;
+    $namalengkap = $old_bio["namalengkap"] ?? $namalengkap;
+    $tempat = $old_bio["tempat"] ?? $tempat;
+    $tanggal = $old_bio["tanggal"] ?? $tanggal;
+    $hobi = $old_bio["hobi"] ?? $hobi;
+    $pasangan = $old_bio["pasangan"] ?? $pasangan;
+    $pekerjaan = $old_bio["pekerjaan"] ?? $pekerjaan;
+    $ortu = $old_bio["ortu"] ?? $ortu;
+    $kakak = $old_bio["kakak"] ?? $kakak;
+    $adik = $old_bio["adik"] ?? $adik;
   }
 ?>
 
@@ -113,15 +113,9 @@
     <section id="biodata">
       <h2>Edit Biodata</h2>
 
-      <?php if (!empty($flash_sukses)): ?>
-        <div style="padding:10px; margin-bottom:10px; background:#d4edda; color:#155724; border-radius:6px">
-          <?= $flash_sukses; ?>
-        </div>
-      <?php endif; ?>
-
-      <?php if (!empty($flash_error)): ?>
+      <?php if (!empty($flash_error_bio)): ?>
         <div style="padding:10px; margin-bottom:10px; background:#f8d7da; color:#721c24; border-radius:6px">
-          <?= $flash_error; ?>  
+          <?= $flash_error_bio; ?>  
         </div>
       <?php endif; ?>
 
@@ -170,7 +164,7 @@
         </label>
 
         <label for="txtChapchoi"><span>Captcha 6 x 2 = ?</span>
-          <input type="number" id="txtChapchoi" name="txtChapchoi" placeholder="Jawab Pertanyaan..." required>
+          <input type="number" id="txtChapchoi" name="txtChapchoi" placeholder="Jawab Pertanyaan..." required value="<?= isset($old_bio['chapchoi']) ? htmlspecialchars($old_bio['chapchoi']) : '' ?>">
         </label>
 
         <button type="submit">Kirim</button>
