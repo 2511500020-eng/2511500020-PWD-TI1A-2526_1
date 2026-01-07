@@ -45,4 +45,5 @@ Telah:<br>
     <li>konfirmasi hapus nim?</li>
     <li>read_inc_bio.php</li>
     <li>kolom waktu dibuat</li>
+    <li>kolom terakhir diubah dan edit fungsi format tanggal biar klo kosong ya kosong bukan 1 jam 1970</li>
 </ol>
