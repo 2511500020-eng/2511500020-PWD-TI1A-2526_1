@@ -28,4 +28,5 @@ Telah:<br>
     <li>bikin validasi ortu ga boleh kosong</li>
     <li>bikin validasi kakak ga boleh kosong</li>
     <li>bikin validasi adik ga boleh kosong</li>
+    <li>ganti if error not empty session old array nya sesuai dengan 10 variabel biodata</li>
 </ol>

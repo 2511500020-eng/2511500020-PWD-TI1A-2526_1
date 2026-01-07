@@ -74,10 +74,16 @@ simpan nilai lama dan pesan error, lalu redirect (konsep PRG)
 */
 if (!empty($errors)) {
   $_SESSION['old'] = [
-    'nama'  => $nama,
-    'email' => $email,
-    'pesan' => $pesan,
-    'captcha' => $captcha,
+    'nim' => $nim,
+    'namalengkap' => $namalengkap,
+    'tempat' => $tempat,
+    'tanggal' => $tanggal,
+    'hobi' => $hobi,
+    'pekerjaan' => $pekerjaan,
+    'pasangan' => $pasangan,
+    'ortu' => $ortu,
+    'kakak' => $kakak,
+    'adik' => $adik,
   ];
 
   $_SESSION['flash_error'] = implode('<br>', $errors);
