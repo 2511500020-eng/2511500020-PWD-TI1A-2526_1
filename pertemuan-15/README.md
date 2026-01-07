@@ -41,4 +41,5 @@ Telah:<br>
     <li>ganti semua tujuan ke read.php jadi ke read_bio.php</li>
     <li>ganti variabel proses_update_bio,php agar sesuai biodata dan ganti tujuan rediect ke read_bio.php atau edit_bio.php (sesuai sikon)</li>
     <li>di edit_bio.php, ganti placegolder input nim jadi readonly</li>
+    <li>ganti file proses_delete_bio.php agar variabelnya sesuai dg biodata dan redirect ke read_bio.php</li>
 </ol>
