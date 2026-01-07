@@ -8,4 +8,5 @@ Telah:<br>
 <br>
 <ol>
     <li>ekstrak file2 try out bapak</li>
+    <li>buat tbl_biodata di phpmyadmin</li>
 </ol>
