@@ -43,4 +43,5 @@ Telah:<br>
     <li>di edit_bio.php, ganti placegolder input nim jadi readonly</li>
     <li>ganti file proses_delete_bio.php agar variabelnya sesuai dg biodata dan redirect ke read_bio.php</li>
     <li>konfirmasi hapus nim?</li>
+    <li>read_inc_bio.php</li>
 </ol>
