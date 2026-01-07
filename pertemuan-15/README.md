@@ -30,4 +30,5 @@ Telah:<br>
     <li>bikin validasi adik ga boleh kosong</li>
     <li>ganti if error not empty session old array nya sesuai dengan 10 variabel biodata</li>
     <li>ganti insert into tbl_tamu jadi tbl_biodata sesuai dengan 10 variabelnya</li>
+    <li>ganti 3s di mysqli_stmt_bind_param jadi 10s</li>
 </ol>
