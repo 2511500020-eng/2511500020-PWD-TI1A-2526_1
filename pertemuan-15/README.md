@@ -25,4 +25,5 @@ Telah:<br>
     <li>bikin validasi hobi ga boleh kosong</li>
     <li>bikin validasi pekerjaan ga boleh kosong</li>
     <li>bikin validasi pasangan ga boleh kosong</li>
+    <li>bikin validasi ortu ga boleh kosong</li>
 </ol>
