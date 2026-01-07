@@ -16,4 +16,5 @@ Telah:<br>
     <li>bikin kolom dan isinya sesuai tbl_biodata</li>
     <li>nonaktif kolom aksi</li>
     <li>copy paste file proses_update.php dan rename jadi proses_update_bio.php</li>
+    <li>ganti action form biodata ke proses_update_bio.php</li>
 </ol>
