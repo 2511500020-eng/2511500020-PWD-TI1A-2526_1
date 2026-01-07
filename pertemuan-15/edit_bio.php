@@ -26,12 +26,12 @@
   /*
     Cek apakah $id bernilai valid:
     Kalau $id tidak valid, maka jangan lanjutkan proses, 
-    kembalikan pengguna ke halaman awal (read.php) sembari 
+    kembalikan pengguna ke halaman awal (read_bio.php) sembari 
     mengirim penanda error.
   */
   if (!$id) {
     $_SESSION['flash_error'] = 'Akses tidak valid.';
-    redirect_ke('read.php');
+    redirect_ke('read_bio.php');
   }
 
   /*
@@ -42,7 +42,7 @@
                                     FROM tbl_biodata WHERE id = ? LIMIT 1");
   if (!$stmt) {
     $_SESSION['flash_error'] = 'Query tidak benar.';
-    redirect_ke('read.php');
+    redirect_ke('read_bio.php');
   }
 
   mysqli_stmt_bind_param($stmt, "i", $id);
@@ -53,7 +53,7 @@
 
   if (!$row) {
     $_SESSION['flash_error'] = 'Record tidak ditemukan.';
-    redirect_ke('read.php');
+    redirect_ke('read_bio.php');
   }
 
   #Nilai awal (prefill form)
@@ -113,15 +113,15 @@
     <section id="biodata">
       <h2>Edit Biodata</h2>
 
-      <?php if (!empty($flash_sukses_bio)): ?>
+      <?php if (!empty($flash_sukses)): ?>
         <div style="padding:10px; margin-bottom:10px; background:#d4edda; color:#155724; border-radius:6px">
-          <?= $flash_sukses_bio; ?>
+          <?= $flash_sukses; ?>
         </div>
       <?php endif; ?>
 
-      <?php if (!empty($flash_error_bio)): ?>
+      <?php if (!empty($flash_error)): ?>
         <div style="padding:10px; margin-bottom:10px; background:#f8d7da; color:#721c24; border-radius:6px">
-          <?= $flash_error_bio; ?>  
+          <?= $flash_error; ?>  
         </div>
       <?php endif; ?>
 
