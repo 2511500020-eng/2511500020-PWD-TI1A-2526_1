@@ -106,7 +106,7 @@
     (WAJIB WHERE id = ?)
   */
   $stmt = mysqli_prepare($conn, "UPDATE tbl_biodata 
-                                SET nim = ?, namalengkap = ?, tempat = ?, tanggal = ?, hobi = ?, pekerjaan = ?, pasangan = ?, ortu = ?, kakak = ?, adik = ? 
+                                SET nim = ?, namalengkap = ?, tempat = ?, tanggal = ?, hobi = ?, pekerjaan = ?, pasangan = ?, ortu = ?, kakak = ?, adik = ?, waktu_ubah = now() 
                                 WHERE id = ?");
   if (!$stmt) {
     #jika gagal prepare, kirim pesan error (tanpa detail sensitif)

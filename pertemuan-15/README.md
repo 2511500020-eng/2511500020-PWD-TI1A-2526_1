@@ -44,4 +44,5 @@ Telah:<br>
     <li>ganti file proses_delete_bio.php agar variabelnya sesuai dg biodata dan redirect ke read_bio.php</li>
     <li>konfirmasi hapus nim?</li>
     <li>read_inc_bio.php</li>
+    <li>kolom waktu dibuat</li>
 </ol>

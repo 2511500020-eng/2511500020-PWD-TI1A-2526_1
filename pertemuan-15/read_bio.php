@@ -46,6 +46,8 @@
     <th>Orang Tua</th>
     <th>Kakak</th>
     <th>Adik</th>
+    <th>Waktu Dibuat</th>
+    <th>Terakhir Diubah</th>
   </tr>
   <?php $i = 1; ?>
   <?php while ($row = mysqli_fetch_assoc($q)): ?>
@@ -66,6 +68,8 @@
       <td><?= nl2br(htmlspecialchars($row['ortu'])); ?></td>
       <td><?= nl2br(htmlspecialchars($row['kakak'])); ?></td>
       <td><?= nl2br(htmlspecialchars($row['adik'])); ?></td>
+      <td><?= formatTanggal(htmlspecialchars($row['waktu_buat'])); ?></td>
+      <td><?= formatTanggal(htmlspecialchars($row['waktu_ubah'])); ?></td>
     </tr>
   <?php endwhile; ?>
 </table>
