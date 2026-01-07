@@ -5,7 +5,7 @@
 
   #cek method form, hanya izinkan POST
   if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    $_SESSION['flash_error'] = 'Akses tidak valid.';
+    $_SESSION['flash_error_bio'] = 'Akses tidak valid.';
     redirect_ke('read_bio.php');
   }
 
@@ -15,7 +15,7 @@
   ]);
 
   if (!$id) {
-    $_SESSION['flash_error'] = 'id Tidak Valid.';
+    $_SESSION['flash_error_bio'] = 'id Tidak Valid.';
     redirect_ke('edit_bio.php?id='. (int)$id);
   }
 
@@ -30,6 +30,7 @@
   $ortu = bersihkan($_POST['txtNmOrtuEd'] ?? '');
   $kakak = bersihkan($_POST['txtNmKakakEd'] ?? '');
   $adik = bersihkan($_POST['txtNmAdikEd'] ?? '');
+  $chapchoi = bersihkan($_POST['txtChapchoi'] ?? '');
 
   #Validasi sederhana
   $errors = []; #ini array untuk menampung semua error yang ada
@@ -78,12 +79,20 @@
     $errors[] = 'Nama adik wajib diisi.';
   }
 
+  if ($chapchoi === '') {
+    $errors[] = 'Captcha wajib diisi.';
+  }
+
+  if ($chapchoi !== '12') {
+    $errors[] = 'Jawaban '. $chapchoi.' captcha salah.';
+  }
+
   /*
   kondisi di bawah ini hanya dikerjakan jika ada error, 
   simpan nilai lama dan pesan error, lalu redirect (konsep PRG)
   */
   if (!empty($errors)) {
-    $_SESSION['old'] = [
+    $_SESSION['old_bio'] = [
       'nim' => $nim,
       'namalengkap' => $namalengkap,
       'tempat' => $tempat,
@@ -94,9 +103,10 @@
       'ortu' => $ortu,
       'kakak' => $kakak,
       'adik' => $adik,
+      'chapchoi' => $chapchoi,
     ];
 
-    $_SESSION['flash_error'] = implode('<br>', $errors);
+    $_SESSION['flash_error_bio'] = implode('<br>', $errors);
     redirect_ke('edit_bio.php?id='. (int)$id);
   }
 
@@ -110,7 +120,7 @@
                                 WHERE id = ?");
   if (!$stmt) {
     #jika gagal prepare, kirim pesan error (tanpa detail sensitif)
-    $_SESSION['flash_error'] = 'Terjadi kesalahan sistem (prepare gagal).';
+    $_SESSION['flash_error_bio'] = 'Terjadi kesalahan sistem (prepare gagal).';
     redirect_ke('edit_bio.php?id='. (int)$id);
   }
 
@@ -118,14 +128,14 @@
   mysqli_stmt_bind_param($stmt, "ssssssssssi", $nim, $namalengkap, $tempat, $tanggal, $hobi, $pekerjaan, $pasangan, $ortu, $kakak, $adik, $id);
 
   if (mysqli_stmt_execute($stmt)) { #jika berhasil, kosongkan old value
-    unset($_SESSION['old']);
+    unset($_SESSION['old_bio']);
     /*
       Redirect balik ke read_bio.php dan tampilkan info sukses.
     */
-    $_SESSION['flash_sukses'] = 'Terima kasih, data Anda sudah diperbaharui.';
+    $_SESSION['flash_sukses_bio'] = 'Terima kasih, data Anda sudah diperbaharui.';
     redirect_ke('read_bio.php'); #pola PRG: kembali ke data dan exit()
   } else { #jika gagal, simpan kembali old value dan tampilkan error umum
-    $_SESSION['old'] = [
+    $_SESSION['old_bio'] = [
       'nim' => $nim,
       'namalengkap' => $namalengkap,
       'tempat' => $tempat,
@@ -137,7 +147,7 @@
       'kakak' => $kakak,
       'adik' => $adik,
     ];
-    $_SESSION['flash_error'] = 'Data gagal diperbaharui. Silakan coba lagi.';
+    $_SESSION['flash_error_bio'] = 'Data gagal diperbaharui. Silakan coba lagi.';
     redirect_ke('edit_bio.php?id='. (int)$id);
   }
   #tutup statement

@@ -70,9 +70,9 @@
 
   #Ambil error dan nilai old input kalau ada
   $flash_error = $_SESSION['flash_error'] ?? '';
-  $old = $_SESSION['old'] ?? [];
-  unset($_SESSION['flash_error'], $_SESSION['old']);
-  if (!empty($old)) {
+  $old_bio = $_SESSION['old_bio'] ?? [];
+  unset($_SESSION['flash_error'], $_SESSION['old_bio']);
+  if (!empty($old_bio)) {
     $nim = $row["nim"] ?? $nim;
     $namalengkap = $row["namalengkap"] ?? $namalengkap;
     $tempat = $row["tempat"] ?? $tempat;
@@ -167,6 +167,10 @@
 
         <label for="txtNmAdik"><span>Nama Adik:</span>
           <input type="text" id="txtNmAdik" name="txtNmAdikEd" placeholder="Masukkan Nama Adik" required value="<?= !empty($adik) ? $adik : '' ?>">
+        </label>
+
+        <label for="txtChapchoi"><span>Captcha 6 x 2 = ?</span>
+          <input type="number" id="txtChapchoi" name="txtChapchoi" placeholder="Jawab Pertanyaan..." required>
         </label>
 
         <button type="submit">Kirim</button>

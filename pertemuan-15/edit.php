@@ -128,7 +128,7 @@
 
           <label for="txtCaptcha"><span>Captcha 2 x 3 = ?</span>
             <input type="number" id="txtCaptcha" name="txtCaptcha" 
-              placeholder="Jawab Pertanyaan..." required>
+              placeholder="Jawab Pertanyaan..." required value="<?= isset($old['captcha']) ? htmlspecialchars($old['captcha']) : '' ?>">>
           </label>
 
           <button type="submit">Kirim</button>
