@@ -22,4 +22,5 @@ Telah:<br>
     <li>bikin validasi nim ga boleh kosong</li>
     <li>bikin validasi tempat tinggal ga boleh kosong</li>
     <li>bikin validasi tanggal lahir ga boleh kosong</li>
+    <li>bikin validasi hobi ga boleh kosong</li>
 </ol>
