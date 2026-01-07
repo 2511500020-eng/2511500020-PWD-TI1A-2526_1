@@ -33,4 +33,5 @@ Telah:<br>
     <li>ganti 3s di mysqli_stmt_bind_param jadi 10s</li>
     <li>flash error dan sukses</li>
     <li>bikin old di form biodata</li>
+    <li>copy paste file proses_update.php dan rename jadi proses_update_bio.php</li>
 </ol>
