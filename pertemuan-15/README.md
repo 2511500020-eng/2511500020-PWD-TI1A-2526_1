@@ -10,4 +10,6 @@ Telah:<br>
     <li>ekstrak file2 try out bapak</li>
     <li>buat tbl_biodata di phpmyadmin</li>
     <li>isi record dlm tabel</li>
+    <li>isi record dlm tabel</li>
+    <li>hapus file index.html</li>
 </ol>
