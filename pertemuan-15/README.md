@@ -27,4 +27,5 @@ Telah:<br>
     <li>bikin validasi pasangan ga boleh kosong</li>
     <li>bikin validasi ortu ga boleh kosong</li>
     <li>bikin validasi kakak ga boleh kosong</li>
+    <li>bikin validasi adik ga boleh kosong</li>
 </ol>
