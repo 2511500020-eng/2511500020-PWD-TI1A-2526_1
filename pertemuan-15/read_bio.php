@@ -34,7 +34,7 @@
 <table border="1" cellpadding="8" cellspacing="0">
   <tr>
     <th>No</th>
-    <!-- <th>Aksi</th> -->
+    <th>Aksi</th>
     <th>ID</th>
     <th>NIM</th>
     <th>Nama Lengkap</th>
@@ -51,10 +51,9 @@
   <?php while ($row = mysqli_fetch_assoc($q)): ?>
     <tr>
       <td><?= $i++ ?></td>
-      <!-- <td>
         <a href="edit.php?cid=<?= (int)$row['cid']; ?>">Edit</a>
         <a onclick="return confirm('Hapus <?= htmlspecialchars($row['cnama']); ?>?')" href="proses_delete.php?cid=<?= (int)$row['cid']; ?>">Delete</a>
-      </td> -->
+      </td>
       <td><?= $row['id']; ?></td>
       <td><?= htmlspecialchars($row['nim']); ?></td>
       <td><?= htmlspecialchars($row['namalengkap']); ?></td>
