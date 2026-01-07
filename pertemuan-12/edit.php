@@ -78,7 +78,6 @@
 
         <input type="hidden" name="cid" value="<?= (int)$cid; ?>">
 
-
         <label for="txtNama"><span>Nama:</span>
           <input type="text" id="txtNama" name="txtNamaEd" placeholder="Masukkan nama" required autocomplete="name" value="<?= !empty($nama) ? $nama : '' ?>">
         </label>
