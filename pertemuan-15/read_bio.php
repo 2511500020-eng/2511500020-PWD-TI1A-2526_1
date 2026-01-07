@@ -51,8 +51,8 @@
   <?php while ($row = mysqli_fetch_assoc($q)): ?>
     <tr>
       <td><?= $i++ ?></td>
-        <a href="edit.php?cid=<?= (int)$row['cid']; ?>">Edit</a>
-        <a onclick="return confirm('Hapus <?= htmlspecialchars($row['cnama']); ?>?')" href="proses_delete.php?cid=<?= (int)$row['cid']; ?>">Delete</a>
+        <a href="edit_bio.php?id=<?= (int)$row['id']; ?>">Edit</a>
+        <a onclick="return confirm('Hapus <?= htmlspecialchars($row['nama']); ?>?')" href="proses_delete_bio.php?cid=<?= (int)$row['id']; ?>">Delete</a>
       </td>
       <td><?= $row['id']; ?></td>
       <td><?= htmlspecialchars($row['nim']); ?></td>
