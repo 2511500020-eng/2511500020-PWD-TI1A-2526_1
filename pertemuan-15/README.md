@@ -17,4 +17,5 @@ Telah:<br>
     <li>nonaktif kolom aksi</li>
     <li>copy paste file proses.php dan rename jadi proses_bio.php</li>
     <li>ganti action form biodata ke proses_bio.php</li>
+    <li>bikin 10 variabel dari bersihkan post form biodata</li>
 </ol>
