@@ -14,4 +14,5 @@ Telah:<br>
     <li>hapus file index.html</li>
     <li>copy paste file read.php dan rename jd read_bio_php</li>
     <li>bikin kolom dan isinya sesuai tbl_biodata</li>
+    <li>nonaktif kolom aksi</li>
 </ol>
