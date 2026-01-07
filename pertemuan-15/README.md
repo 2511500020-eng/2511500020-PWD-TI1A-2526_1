@@ -40,4 +40,5 @@ Telah:<br>
     <li>edit file edit_bio.php agar sesuai dengan form biodata beserta variabelnya</li>
     <li>ganti semua tujuan ke read.php jadi ke read_bio.php</li>
     <li>ganti variabel proses_update_bio,php agar sesuai biodata dan ganti tujuan rediect ke read_bio.php atau edit_bio.php (sesuai sikon)</li>
+    <li>di edit_bio.php, ganti placegolder input nim jadi readonly</li>
 </ol>

@@ -130,7 +130,7 @@
         <input type="text" name="id" value="<?= (int)$id; ?>">
     
         <label for="txtNim"><span>NIM:</span>
-          <input type="text" id="txtNim" name="txtNimEd" placeholder="Masukkan NIM" required value="<?= !empty($nim) ? $nim : '' ?>">
+          <input type="text" id="txtNim" name="txtNimEd" readonly required value="<?= !empty($nim) ? $nim : '' ?>">
         </label>
 
         <label for="txtNmLengkap"><span>Nama Lengkap:</span>
