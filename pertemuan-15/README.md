@@ -34,4 +34,5 @@ Telah:<br>
     <li>flash error dan sukses</li>
     <li>bikin old di form biodata</li>
     <li>copy paste file proses_update.php dan rename jadi proses_update_bio.php</li>
+    <li>copy paste file proses_delete.php dan rename jadi proses_delete_bio.php</li>
 </ol>
