@@ -18,17 +18,17 @@
 ?>
 
 <?php if (!empty($flash_sukses)): ?>
-        <div style="padding:10px; margin-bottom:10px; 
-          background:#d4edda; color:#155724; border-radius:6px;">
-          <?= $flash_sukses; ?>
-        </div>
+  <div style="padding:10px; margin-bottom:10px; 
+    background:#d4edda; color:#155724; border-radius:6px;">
+    <?= $flash_sukses; ?>
+  </div>
 <?php endif; ?>
 
 <?php if (!empty($flash_error)): ?>
-        <div style="padding:10px; margin-bottom:10px; 
-          background:#f8d7da; color:#721c24; border-radius:6px;">
-          <?= $flash_error; ?>
-        </div>
+  <div style="padding:10px; margin-bottom:10px; 
+    background:#f8d7da; color:#721c24; border-radius:6px;">
+    <?= $flash_error; ?>
+  </div>
 <?php endif; ?>
 
 <table border="1" cellpadding="8" cellspacing="0">
@@ -51,8 +51,9 @@
   <?php while ($row = mysqli_fetch_assoc($q)): ?>
     <tr>
       <td><?= $i++ ?></td>
+      <td>
         <a href="edit_bio.php?id=<?= (int)$row['id']; ?>">Edit</a>
-        <a onclick="return confirm('Hapus <?= htmlspecialchars($row['nama']); ?>?')" href="proses_delete_bio.php?cid=<?= (int)$row['id']; ?>">Delete</a>
+        <a onclick="return confirm('Hapus <?= htmlspecialchars($row['nama']); ?>?')" href="proses_delete_bio.php?id=<?= (int)$row['id']; ?>">Delete</a>
       </td>
       <td><?= $row['id']; ?></td>
       <td><?= htmlspecialchars($row['nim']); ?></td>
