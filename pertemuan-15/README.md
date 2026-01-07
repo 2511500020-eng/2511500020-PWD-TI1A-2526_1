@@ -32,4 +32,5 @@ Telah:<br>
     <li>ganti insert into tbl_tamu jadi tbl_biodata sesuai dengan 10 variabelnya</li>
     <li>ganti 3s di mysqli_stmt_bind_param jadi 10s</li>
     <li>flash error dan sukses</li>
+    <li>bikin old di form biodata</li>
 </ol>
