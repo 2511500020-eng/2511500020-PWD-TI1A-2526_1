@@ -23,5 +23,6 @@ Telah:<br>
     <li>copy paste dan rename proses.php jadi proses_bio.php</li>
     <li>ganti flash_error jadi flash_error_bio</li>
     <li>ganti flash_sukses jadi flash_sukses_bio</li>
+    <li>ganti errors jadi errors_bio</li>
 
 </ol>
