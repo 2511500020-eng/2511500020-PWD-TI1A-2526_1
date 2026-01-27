@@ -31,5 +31,6 @@ Telah:<br>
     <li>sesuaikan variabel lainnya</li>
     <li>menampilkan flash sukses dan error biodata</li>
     <li>tampil nilai old klo error</li>
+    <li>ganti method form biodata jadi proses_bio.php</li>
 
 </ol>

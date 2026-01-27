@@ -61,10 +61,10 @@ require_once __DIR__ . '/fungsi.php';
         </div>
       <?php endif; ?>
 
-      <form action="proses.php" method="POST">
+      <form action="proses_bio.php" method="POST">
 
         <label for="txtNim"><span>NIM:</span>
-          <input type="text" id="txtNim" name="txtNim" placeholder="Masukkan NIM" required value="<?= isset($old_bio['nim']) ? htmlspecialchars($old_bio['nim']) : '' ?>">
+          <input type="number" id="txtNim" name="txtNim" placeholder="Masukkan NIM" required value="<?= isset($old_bio['nim']) ? htmlspecialchars($old_bio['nim']) : '' ?>">
         </label>
 
         <label for="txtNmLengkap"><span>Nama Lengkap:</span>
