@@ -39,5 +39,6 @@ Telah:<br>
     <li>ganti cid jadi id</li>
     <li>redirect ke read_bio.php</li>
     <li>ganti errors jadi errors_bio</li>
+    <li>sanitasi</li>
 
 </ol>
