@@ -105,8 +105,8 @@
     menyiapkan query UPDATE dengan prepared statement 
     (WAJIB WHERE id = ?)
   */
-  $stmt = mysqli_prepare($conn, "UPDATE tbl_tamu 
-                                SET cnama = ?, cemail = ?, cpesan = ? 
+  $stmt = mysqli_prepare($conn, "UPDATE tbl_biodata 
+                                SET nim = ?, namalengkap = ?, tempat = ?, tanggal = ?, hobi = ?, pekerjaan = ?, pasangan = ?, ortu = ?, kakak = ?, adik = ?, waktu_ubah = now() 
                                 WHERE id = ?");
   if (!$stmt) {
     #jika gagal prepare, kirim pesan error (tanpa detail sensitif)
@@ -115,14 +115,14 @@
   }
 
   #bind parameter dan eksekusi (s = string, i = integer)
-  mysqli_stmt_bind_param($stmt, "sssi", $nama, $email, $pesan, $id);
+  mysqli_stmt_bind_param($stmt, "ssssssssssi", $nim, $namalengkap, $tempat, $tanggal, $hobi, $pekerjaan, $pasangan, $ortu, $kakak, $adik, $id);
 
   if (mysqli_stmt_execute($stmt)) { #jika berhasil, kosongkan old_bio value
     unset($_SESSION['old_bio']);
     /*
       Redirect balik ke read_bio.php dan tampilkan info sukses.
     */
-    $_SESSION['flash_sukses'] = 'Terima kasih, data Anda sudah diperbaharui.';
+    $_SESSION['flash_sukses_bio'] = 'Terima kasih, data Anda sudah diperbaharui.';
     redirect_ke('read_bio.php'); #pola PRG: kembali ke data dan exit()
   } else { #jika gagal, simpan kembali old_bio value dan tampilkan error umum
     $_SESSION['old_bio'] = [

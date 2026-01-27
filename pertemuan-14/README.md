@@ -43,5 +43,6 @@ Telah:<br>
     <li>validasi</li>
     <li>ganti old jadi old_bio</li>
     <li>redirect ke edit_bio.php</li>
+    <li>update sesuai biodata</li>
 
 </ol>
