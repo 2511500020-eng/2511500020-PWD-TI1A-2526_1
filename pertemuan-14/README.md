@@ -26,5 +26,6 @@ Telah:<br>
     <li>ganti errors jadi errors_bio</li>
     <li>sanitasi form</li>
     <li>validasi form</li>
+    <li>ganti old jadi old_bio</li>
 
 </ol>

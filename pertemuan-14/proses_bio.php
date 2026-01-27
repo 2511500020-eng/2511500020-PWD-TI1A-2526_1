@@ -73,11 +73,17 @@ kondisi di bawah ini hanya dikerjakan jika ada error,
 simpan nilai lama dan pesan error, lalu redirect (konsep PRG)
 */
 if (!empty($errors_bio)) {
-  $_SESSION['old'] = [
-    'nama'  => $nama,
-    'email' => $email,
-    'pesan' => $pesan,
-    'captcha' => $captcha,
+  $_SESSION['old_bio'] = [
+    'nim' => $nim,
+    'namalengkap' => $namalengkap,
+    'tempat' => $tempat,
+    'tanggal' => $tanggal,
+    'hobi' => $hobi,
+    'pekerjaan' => $pekerjaan,
+    'pasangan' => $pasangan,
+    'ortu' => $ortu,
+    'kakak' => $kakak,
+    'adik' => $adik,
   ];
 
   $_SESSION['flash_error_bio'] = implode('<br>', $errors_bio);
@@ -96,12 +102,12 @@ if (!$stmt) {
 #bind parameter dan eksekusi (s = string)
 mysqli_stmt_bind_param($stmt, "sss", $nama, $email, $pesan);
 
-if (mysqli_stmt_execute($stmt)) { #jika berhasil, kosongkan old value, beri pesan sukses
-  unset($_SESSION['old']);
+if (mysqli_stmt_execute($stmt)) { #jika berhasil, kosongkan old_bio value, beri pesan sukses
+  unset($_SESSION['old_bio']);
   $_SESSION['flash_sukses_bio'] = 'Terima kasih, data Anda sudah tersimpan.';
   redirect_ke('index.php#contact'); #pola PRG: kembali ke form / halaman home
-} else { #jika gagal, simpan kembali old value dan tampilkan error umum
-  $_SESSION['old'] = [
+} else { #jika gagal, simpan kembali old_bio value dan tampilkan error umum
+  $_SESSION['old_bio'] = [
     'nama'  => $nama,
     'email' => $email,
     'pesan' => $pesan,

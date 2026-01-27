@@ -95,7 +95,6 @@ if (!empty($errors)) {
     'kakak' => $kakak,
     'adik' => $adik,
     'chapchoi' => $chapchoi,
-
   ];
 
   $_SESSION['flash_error_bio'] = implode('<br>', $errors);
