@@ -25,5 +25,6 @@ Telah:<br>
     <li>ganti flash_sukses jadi flash_sukses_bio</li>
     <li>ganti errors jadi errors_bio</li>
     <li>sanitasi form</li>
+    <li>validasi form</li>
 
 </ol>
