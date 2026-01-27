@@ -45,5 +45,6 @@ Telah:<br>
     <li>redirect ke edit_bio.php</li>
     <li>update sesuai biodata</li>
     <li>tujuan link edit</li>
+    <li>copy paste dan rename edit.php jadi edit_bio.php</li>
 
 </ol>
