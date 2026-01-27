@@ -9,14 +9,14 @@
     redirect_ke('read_bio.php');
   }
 
-  #validasi cid wajib angka dan > 0
-  $cid = filter_input(INPUT_POST, 'cid', FILTER_VALIDATE_INT, [
+  #validasi id wajib angka dan > 0
+  $id = filter_input(INPUT_POST, 'id', FILTER_VALIDATE_INT, [
     'options' => ['min_range' => 1]
   ]);
 
-  if (!$cid) {
-    $_SESSION['flash_error_bio'] = 'CID Tidak Valid.';
-    redirect_ke('edit.php?cid='. (int)$cid);
+  if (!$id) {
+    $_SESSION['flash_error_bio'] = 'id Tidak Valid.';
+    redirect_ke('edit.php?id='. (int)$id);
   }
 
   #ambil dan bersihkan (sanitasi) nilai dari form
@@ -70,25 +70,25 @@
     ];
 
     $_SESSION['flash_error_bio'] = implode('<br>', $errors);
-    redirect_ke('edit.php?cid='. (int)$cid);
+    redirect_ke('edit.php?id='. (int)$id);
   }
 
   /*
     Prepared statement untuk anti SQL injection.
     menyiapkan query UPDATE dengan prepared statement 
-    (WAJIB WHERE cid = ?)
+    (WAJIB WHERE id = ?)
   */
   $stmt = mysqli_prepare($conn, "UPDATE tbl_tamu 
                                 SET cnama = ?, cemail = ?, cpesan = ? 
-                                WHERE cid = ?");
+                                WHERE id = ?");
   if (!$stmt) {
     #jika gagal prepare, kirim pesan error (tanpa detail sensitif)
     $_SESSION['flash_error_bio'] = 'Terjadi kesalahan sistem (prepare gagal).';
-    redirect_ke('edit.php?cid='. (int)$cid);
+    redirect_ke('edit.php?id='. (int)$id);
   }
 
   #bind parameter dan eksekusi (s = string, i = integer)
-  mysqli_stmt_bind_param($stmt, "sssi", $nama, $email, $pesan, $cid);
+  mysqli_stmt_bind_param($stmt, "sssi", $nama, $email, $pesan, $id);
 
   if (mysqli_stmt_execute($stmt)) { #jika berhasil, kosongkan old value
     unset($_SESSION['old']);
@@ -104,9 +104,9 @@
       'pesan' => $pesan,
     ];
     $_SESSION['flash_error_bio'] = 'Data gagal diperbaharui. Silakan coba lagi.';
-    redirect_ke('edit.php?cid='. (int)$cid);
+    redirect_ke('edit.php?id='. (int)$id);
   }
   #tutup statement
   mysqli_stmt_close($stmt);
 
-  redirect_ke('edit.php?cid='. (int)$cid);
+  redirect_ke('edit.php?id='. (int)$id);
