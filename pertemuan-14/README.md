@@ -33,5 +33,6 @@ Telah:<br>
     <li>tampil nilai old klo error</li>
     <li>ganti method form biodata jadi proses_bio.php</li>
     <li>copy paste dan rename proses_update.php jadi proses_update_bio.php</li>
+    <li>ganti flash_error jadi flash_error_bio</li>
 
 </ol>
