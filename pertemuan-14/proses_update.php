@@ -16,7 +16,7 @@
 
   if (!$id) {
     $_SESSION['flash_error_bio'] = 'id Tidak Valid.';
-    redirect_ke('edit.php?id='. (int)$id);
+    redirect_ke('edit_bio.php?id='. (int)$id);
   }
 
   #ambil dan bersihkan (sanitasi) nilai dari form
@@ -70,7 +70,7 @@
     ];
 
     $_SESSION['flash_error_bio'] = implode('<br>', $errors);
-    redirect_ke('edit.php?id='. (int)$id);
+    redirect_ke('edit_bio.php?id='. (int)$id);
   }
 
   /*
@@ -84,7 +84,7 @@
   if (!$stmt) {
     #jika gagal prepare, kirim pesan error (tanpa detail sensitif)
     $_SESSION['flash_error_bio'] = 'Terjadi kesalahan sistem (prepare gagal).';
-    redirect_ke('edit.php?id='. (int)$id);
+    redirect_ke('edit_bio.php?id='. (int)$id);
   }
 
   #bind parameter dan eksekusi (s = string, i = integer)
@@ -104,9 +104,9 @@
       'pesan' => $pesan,
     ];
     $_SESSION['flash_error_bio'] = 'Data gagal diperbaharui. Silakan coba lagi.';
-    redirect_ke('edit.php?id='. (int)$id);
+    redirect_ke('edit_bio.php?id='. (int)$id);
   }
   #tutup statement
   mysqli_stmt_close($stmt);
 
-  redirect_ke('edit.php?id='. (int)$id);
+  redirect_ke('edit_bio.php?id='. (int)$id);
