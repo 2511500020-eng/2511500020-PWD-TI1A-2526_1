@@ -14,5 +14,6 @@ Telah:<br>
     <li>copy paste dan rename read.php jadi read_bio.php</li>
     <li>ganti cid jadi id</li>
     <li>ganti flash_error jadi flash_error_bio</li>
+    <li>ganti flash_sukses jadi flash_sukses_bio</li>
 
 </ol>
