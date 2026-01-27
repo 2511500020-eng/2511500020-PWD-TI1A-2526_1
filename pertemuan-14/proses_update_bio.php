@@ -83,7 +83,7 @@
   simpan nilai lama dan pesan error, lalu redirect (konsep PRG)
   */
   if (!empty($errors_bio)) {
-    $_SESSION['old'] = [
+    $_SESSION['old_bio'] = [
       'nama'  => $nama,
       'email' => $email,
       'pesan' => $pesan
@@ -110,15 +110,15 @@
   #bind parameter dan eksekusi (s = string, i = integer)
   mysqli_stmt_bind_param($stmt, "sssi", $nama, $email, $pesan, $id);
 
-  if (mysqli_stmt_execute($stmt)) { #jika berhasil, kosongkan old value
-    unset($_SESSION['old']);
+  if (mysqli_stmt_execute($stmt)) { #jika berhasil, kosongkan old_bio value
+    unset($_SESSION['old_bio']);
     /*
       Redirect balik ke read_bio.php dan tampilkan info sukses.
     */
     $_SESSION['flash_sukses'] = 'Terima kasih, data Anda sudah diperbaharui.';
     redirect_ke('read_bio.php'); #pola PRG: kembali ke data dan exit()
-  } else { #jika gagal, simpan kembali old value dan tampilkan error umum
-    $_SESSION['old'] = [
+  } else { #jika gagal, simpan kembali old_bio value dan tampilkan error umum
+    $_SESSION['old_bio'] = [
       'nama'  => $nama,
       'email' => $email,
       'pesan' => $pesan,
