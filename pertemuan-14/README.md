@@ -13,5 +13,6 @@ Telah:<br>
     <li>insert 1 record data di tbl_biodata</li>
     <li>copy paste dan rename read.php jadi read_bio.php</li>
     <li>ganti cid jadi id</li>
+    <li>ganti flash_error jadi flash_error_bio</li>
 
 </ol>
