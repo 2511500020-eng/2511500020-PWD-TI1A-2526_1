@@ -46,5 +46,6 @@ Telah:<br>
     <li>update sesuai biodata</li>
     <li>tujuan link edit</li>
     <li>copy paste dan rename edit.php jadi edit_bio.php</li>
+    <li>ganti2 variabel sesuai biodata dan ganti nama dan id form dan bikin nilai prefillnya</li>
 
 </ol>

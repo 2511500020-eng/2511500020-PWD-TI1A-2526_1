@@ -4,18 +4,18 @@
   require 'fungsi.php';
 
   /*
-    Ambil nilai cid dari GET dan lakukan validasi untuk 
-    mengecek cid harus angka dan lebih besar dari 0 (> 0).
-    'options' => ['min_range' => 1] artinya cid harus ≥ 1 
+    Ambil nilai id dari GET dan lakukan validasi untuk 
+    mengecek id harus angka dan lebih besar dari 0 (> 0).
+    'options' => ['min_range' => 1] artinya id harus ≥ 1 
     (bukan 0, bahkan bukan negatif, bukan huruf, bukan HTML).
   */
-  $cid = filter_input(INPUT_GET, 'cid', FILTER_VALIDATE_INT, [
+  $id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT, [
     'options' => ['min_range' => 1]
   ]);
   /*
     Skrip di atas cara penulisan lamanya adalah:
-    $cid = $_GET['cid'] ?? '';
-    $cid = (int)$cid;
+    $id = $_GET['id'] ?? '';
+    $id = (int)$id;
 
     Cara lama seperti di atas akan mengambil data mentah 
     kemudian validasi dilakukan secara terpisah, sehingga 
@@ -24,51 +24,65 @@
   */
 
   /*
-    Cek apakah $cid bernilai valid:
-    Kalau $cid tidak valid, maka jangan lanjutkan proses, 
-    kembalikan pengguna ke halaman awal (read.php) sembari 
+    Cek apakah $id bernilai valid:
+    Kalau $id tidak valid, maka jangan lanjutkan proses, 
+    kembalikan pengguna ke halaman awal (read_bio.php) sembari 
     mengirim penanda error.
   */
-  if (!$cid) {
-    $_SESSION['flash_error'] = 'Akses tidak valid.';
-    redirect_ke('read.php');
+  if (!$id) {
+    $_SESSION['flash_error_bio'] = 'Akses tidak valid.';
+    redirect_ke('read_bio.php');
   }
 
   /*
     Ambil data lama dari DB menggunakan prepared statement, 
     jika ada kesalahan, tampilkan penanda error.
   */
-  $stmt = mysqli_prepare($conn, "SELECT cid, cnama, cemail, cpesan 
-                                    FROM tbl_tamu WHERE cid = ? LIMIT 1");
+    $stmt = mysqli_prepare($conn, "SELECT id, nim, namalengkap, tempat, tanggal, hobi, pekerjaan, pasangan, ortu, kakak, adik
+                                    FROM tbl_biodata WHERE id = ? LIMIT 1");
   if (!$stmt) {
-    $_SESSION['flash_error'] = 'Query tidak benar.';
-    redirect_ke('read.php');
+    $_SESSION['flash_error_bio'] = 'Query tidak benar.';
+    redirect_ke('read_bio.php');
   }
 
-  mysqli_stmt_bind_param($stmt, "i", $cid);
+  mysqli_stmt_bind_param($stmt, "i", $id);
   mysqli_stmt_execute($stmt);
   $res = mysqli_stmt_get_result($stmt);
   $row = mysqli_fetch_assoc($res);
   mysqli_stmt_close($stmt);
 
   if (!$row) {
-    $_SESSION['flash_error'] = 'Record tidak ditemukan.';
-    redirect_ke('read.php');
+    $_SESSION['flash_error_bio'] = 'Record tidak ditemukan.';
+    redirect_ke('read_bio.php');
   }
 
   #Nilai awal (prefill form)
-  $nama  = $row['cnama'] ?? '';
-  $email = $row['cemail'] ?? '';
-  $pesan = $row['cpesan'] ?? '';
+  $nim = $row["nim"] ?? "";
+  $namalengkap = $row["namalengkap"] ?? "";
+  $tempat = $row["tempat"] ?? "";
+  $tanggal = $row["tanggal"] ?? "";
+  $hobi = $row["hobi"] ?? "";
+  $pasangan = $row["pasangan"] ?? "";
+  $pekerjaan = $row["pekerjaan"] ?? "";
+  $ortu = $row["ortu"] ?? "";
+  $kakak = $row["kakak"] ?? "";
+  $adik = $row["adik"] ?? "";
 
-  #Ambil error dan nilai old input kalau ada
-  $flash_error = $_SESSION['flash_error'] ?? '';
-  $old = $_SESSION['old'] ?? [];
-  unset($_SESSION['flash_error'], $_SESSION['old']);
-  if (!empty($old)) {
-    $nama  = $old['nama'] ?? $nama;
-    $email = $old['email'] ?? $email;
-    $pesan = $old['pesan'] ?? $pesan;
+  #Ambil error dan nilai old_bio input kalau ada
+  $flash_error_bio = $_SESSION['flash_error_bio'] ?? '';
+  $old_bio = $_SESSION['old_bio'] ?? [];
+  unset($_SESSION['flash_error_bio'], $_SESSION['old_bio']);
+  if (!empty($old_bio)) {
+    $nim = $row["nim"] ?? "";
+    $namalengkap = $row["namalengkap"] ?? "";
+    $tempat = $row["tempat"] ?? "";
+    $tanggal = $row["tanggal"] ?? "";
+    $hobi = $row["hobi"] ?? "";
+    $pasangan = $row["pasangan"] ?? "";
+    $pekerjaan = $row["pekerjaan"] ?? "";
+    $ortu = $row["ortu"] ?? "";
+    $kakak = $row["kakak"] ?? "";
+    $adik = $row["adik"] ?? "";
   }
 ?>
 
@@ -98,42 +112,59 @@
     <main>
       <section id="contact">
         <h2>Edit Buku Tamu</h2>
-        <?php if (!empty($flash_error)): ?>
+        <?php if (!empty($flash_error_bio)): ?>
           <div style="padding:10px; margin-bottom:10px; 
             background:#f8d7da; color:#721c24; border-radius:6px;">
-            <?= $flash_error; ?>
+            <?= $flash_error_bio; ?>
           </div>
         <?php endif; ?>
         <form action="proses_update.php" method="POST">
 
-          <input type="text" name="cid" value="<?= (int)$cid; ?>">
+          <input type="text" name="id" value="<?= (int)$id; ?>">
 
-          <label for="txtNama"><span>Nama:</span>
-            <input type="text" id="txtNama" name="txtNamaEd" 
-              placeholder="Masukkan nama" required autocomplete="name"
-              value="<?= !empty($nama) ? $nama : '' ?>">
-          </label>
+        <label for="txtNim"><span>NIM:</span>
+          <input type="text" id="txtNim" name="txtNimEd" readonly required value="<?= !empty($nim) ? $nim : '' ?>">
+        </label>
 
-          <label for="txtEmail"><span>Email:</span>
-            <input type="email" id="txtEmail" name="txtEmailEd" 
-              placeholder="Masukkan email" required autocomplete="email"
-              value="<?= !empty($email) ? $email : '' ?>">
-          </label>
+        <label for="txtNmLengkap"><span>Nama Lengkap:</span>
+          <input type="text" id="txtNmLengkap" name="txtNmLengkapEd" placeholder="Masukkan Nama Lengkap" required value="<?= !empty($namalengkap) ? $namalengkap : '' ?>">
+        </label>
 
-          <label for="txtPesan"><span>Pesan Anda:</span>
-            <textarea id="txtPesan" name="txtPesanEd" rows="4" 
-              placeholder="Tulis pesan anda..." 
-              required><?= !empty($pesan) ? $pesan : '' ?></textarea>
-          </label>
+        <label for="txtT4Lhr"><span>Tempat Lahir:</span>
+          <input type="text" id="txtT4Lhr" name="txtT4LhrEd" placeholder="Masukkan Tempat Lahir" required value="<?= !empty($tempat) ? $tempat : '' ?>">
+        </label>
 
-          <label for="txtCaptcha"><span>Captcha 2 x 3 = ?</span>
-            <input type="number" id="txtCaptcha" name="txtCaptcha" 
-              placeholder="Jawab Pertanyaan..." required>
-          </label>
+        <label for="txtTglLhr"><span>Tanggal Lahir:</span>
+          <input type="text" id="txtTglLhr" name="txtTglLhrEd" placeholder="Masukkan Tanggal Lahir" required value="<?= !empty($tanggal) ? $tanggal : '' ?>">
+        </label>
+
+        <label for="txtHobi"><span>Hobi:</span>
+          <input type="text" id="txtHobi" name="txtHobiEd" placeholder="Masukkan Hobi" required value="<?= !empty($hobi) ? $hobi : '' ?>">
+        </label>
+
+        <label for="txtPasangan"><span>Pasangan:</span>
+          <input type="text" id="txtPasangan" name="txtPasanganEd" placeholder="Masukkan Pasangan" required value="<?= !empty($pasangan) ? $pasangan : '' ?>">
+        </label>
+
+        <label for="txtKerja"><span>Pekerjaan:</span>
+          <input type="text" id="txtKerja" name="txtKerjaEd" placeholder="Masukkan Pekerjaan" required value="<?= !empty($pekerjaan) ? $pekerjaan : '' ?>">
+        </label>
+
+        <label for="txtNmOrtu"><span>Nama Orang Tua:</span>
+          <input type="text" id="txtNmOrtu" name="txtNmOrtuEd" placeholder="Masukkan Nama Orang Tua" required value="<?= !empty($ortu) ? $ortu : '' ?>">
+        </label>
+
+        <label for="txtNmKakak"><span>Nama Kakak:</span>
+          <input type="text" id="txtNmKakak" name="txtNmKakakEd" placeholder="Masukkan Nama Kakak" required value="<?= !empty($kakak) ? $kakak : '' ?>">
+        </label>
+
+        <label for="txtNmAdik"><span>Nama Adik:</span>
+          <input type="text" id="txtNmAdik" name="txtNmAdikEd" placeholder="Masukkan Nama Adik" required value="<?= !empty($adik) ? $adik : '' ?>">
+        </label>
 
           <button type="submit">Kirim</button>
           <button type="reset">Batal</button>
-          <a href="read.php" class="reset">Kembali</a>
+          <a href="read_bio.php" class="reset">Kembali</a>
         </form>
       </section>
     </main>
