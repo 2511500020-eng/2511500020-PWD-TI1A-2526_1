@@ -21,5 +21,6 @@ Telah:<br>
     <li>ganti variabel sesuai dengan biodata</li>
     <li>menampilkan biodata di section about menggunakan include read_inc_bio.php</li>
     <li>copy paste dan rename proses.php jadi proses_bio.php</li>
+    <li>ganti flash_error jadi flash_error_bio</li>
 
 </ol>
