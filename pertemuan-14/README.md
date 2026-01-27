@@ -40,5 +40,6 @@ Telah:<br>
     <li>redirect ke read_bio.php</li>
     <li>ganti errors jadi errors_bio</li>
     <li>sanitasi</li>
+    <li>validasi</li>
 
 </ol>
