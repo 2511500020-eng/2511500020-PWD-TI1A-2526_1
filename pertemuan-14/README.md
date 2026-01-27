@@ -19,5 +19,6 @@ Telah:<br>
     <li>memunculkan isi tabel biodata</li>
     <li>copy paste dan rename read_inc.php jadi read_inc_bio.php</li>
     <li>ganti variabel sesuai dengan biodata</li>
+    <li>menampilkan biodata di section about menggunakan include read_inc_bio.php</li>
 
 </ol>

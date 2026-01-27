@@ -13,7 +13,6 @@ $fieldBiodata = [
       "kakak" => ["label" => "Nama Kakak:", "suffix" => ""],
       "adik" => ["label" => "Nama Adik:", "suffix" => ""],
     ];
-];
 
 $sql = "SELECT * FROM tbl_biodata ORDER BY id DESC";
 $q = mysqli_query($conn, $sql);
