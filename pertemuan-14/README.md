@@ -30,5 +30,6 @@ Telah:<br>
     <li>redirect ke form biodata</li>
     <li>sesuaikan variabel lainnya</li>
     <li>menampilkan flash sukses dan error biodata</li>
+    <li>tampil nilai old klo error</li>
 
 </ol>
