@@ -29,5 +29,6 @@ Telah:<br>
     <li>ganti old jadi old_bio</li>
     <li>redirect ke form biodata</li>
     <li>sesuaikan variabel lainnya</li>
+    <li>menampilkan flash sukses dan error biodata</li>
 
 </ol>
