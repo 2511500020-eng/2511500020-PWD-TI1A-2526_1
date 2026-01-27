@@ -18,5 +18,6 @@ Telah:<br>
     <li>bikin judul kolom sesuai biodata</li>
     <li>memunculkan isi tabel biodata</li>
     <li>copy paste dan rename read_inc.php jadi read_inc_bio.php</li>
+    <li>ganti variabel sesuai dengan biodata</li>
 
 </ol>
