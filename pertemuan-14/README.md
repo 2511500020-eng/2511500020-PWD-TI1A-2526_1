@@ -17,5 +17,6 @@ Telah:<br>
     <li>ganti flash_sukses jadi flash_sukses_bio</li>
     <li>bikin judul kolom sesuai biodata</li>
     <li>memunculkan isi tabel biodata</li>
+    <li>copy paste dan rename read_inc.php jadi read_inc_bio.php</li>
 
 </ol>
