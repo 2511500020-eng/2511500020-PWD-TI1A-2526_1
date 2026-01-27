@@ -27,5 +27,6 @@ Telah:<br>
     <li>sanitasi form</li>
     <li>validasi form</li>
     <li>ganti old jadi old_bio</li>
+    <li>redirect ke form biodata</li>
 
 </ol>
