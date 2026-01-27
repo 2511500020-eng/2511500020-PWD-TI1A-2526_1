@@ -11,5 +11,7 @@ Telah:<br>
     <li>hapus index.html</li>
     <li>buat tabel tbl_biodata di database</li>
     <li>insert 1 record data di tbl_biodata</li>
+    <li>copy paste dan rename read.php jadi read_bio.php</li>
+    <li>ganti cid jadi id</li>
 
 </ol>
