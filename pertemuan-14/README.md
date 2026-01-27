@@ -38,5 +38,6 @@ Telah:<br>
     <li>ganti flash_sukses jadi flash_sukses_bio</li>
     <li>ganti cid jadi id</li>
     <li>redirect ke read_bio.php</li>
+    <li>ganti errors jadi errors_bio</li>
 
 </ol>

@@ -20,10 +20,16 @@
   }
 
   #ambil dan bersihkan (sanitasi) nilai dari form
-  $nama  = bersihkan($_POST['txtNamaEd']  ?? '');
-  $email = bersihkan($_POST['txtEmailEd'] ?? '');
-  $pesan = bersihkan($_POST['txtPesanEd'] ?? '');
-  $captcha = bersihkan($_POST['txtCaptcha'] ?? '');
+  $nim = bersihkan($_POST['txtNimEd'] ?? '');
+  $namalengkap = bersihkan($_POST['txtNmLengkapEd'] ?? '');
+  $tempat = bersihkan($_POST['txtT4LhrEd'] ?? '');
+  $tanggal = bersihkan($_POST['txtTglLhrEd'] ?? '');
+  $hobi = bersihkan($_POST['txtHobiEd'] ?? '');
+  $pekerjaan = bersihkan($_POST['txtKerjaEd'] ?? '');
+  $pasangan = bersihkan($_POST['txtPasanganEd'] ?? '');
+  $ortu = bersihkan($_POST['txtNmOrtuEd'] ?? '');
+  $kakak = bersihkan($_POST['txtNmKakakEd'] ?? '');
+  $adik = bersihkan($_POST['txtNmAdikEd'] ?? '');
 
   #Validasi sederhana
   $errors = []; #ini array untuk menampung semua error yang ada
