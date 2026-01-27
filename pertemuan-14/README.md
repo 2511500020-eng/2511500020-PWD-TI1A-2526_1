@@ -44,5 +44,6 @@ Telah:<br>
     <li>ganti old jadi old_bio</li>
     <li>redirect ke edit_bio.php</li>
     <li>update sesuai biodata</li>
+    <li>tujuan link edit</li>
 
 </ol>
