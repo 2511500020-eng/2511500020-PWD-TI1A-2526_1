@@ -129,6 +129,7 @@ if (mysqli_stmt_execute($stmt)) { #jika berhasil, kosongkan old value, beri pesa
     'ortu' => $ortu,
     'kakak' => $kakak,
     'adik' => $adik,
+    'chapchoi' => $chapchoi,
   ];
 
   $_SESSION['flash_error_bio'] = 'Data gagal disimpan. Silakan coba lagi.';

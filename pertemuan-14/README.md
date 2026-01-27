@@ -28,5 +28,6 @@ Telah:<br>
     <li>validasi form</li>
     <li>ganti old jadi old_bio</li>
     <li>redirect ke form biodata</li>
+    <li>sesuaikan variabel lainnya</li>
 
 </ol>
