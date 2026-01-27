@@ -32,5 +32,6 @@ Telah:<br>
     <li>menampilkan flash sukses dan error biodata</li>
     <li>tampil nilai old klo error</li>
     <li>ganti method form biodata jadi proses_bio.php</li>
+    <li>copy paste dan rename proses_update.php jadi proses_update_bio.php</li>
 
 </ol>

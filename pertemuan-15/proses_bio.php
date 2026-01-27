@@ -24,65 +24,65 @@ $chapchoi = bersihkan($_POST['txtChapchoi'] ?? '');
 
 
 #Validasi sederhana
-$errors = []; #ini array untuk menampung semua error yang ada
+$errors_bio = []; #ini array untuk menampung semua error yang ada
 
 if ($nim === '') {
-  $errors[] = 'NIM wajib diisi.';
+  $errors_bio[] = 'NIM wajib diisi.';
 }
 
 if ($namalengkap === '') {
-  $errors[] = 'Nama wajib diisi.';
+  $errors_bio[] = 'Nama wajib diisi.';
 }
 
 if (mb_strlen($namalengkap) < 3) {
-  $errors[] = 'Nama minimal 3 karakter.';
+  $errors_bio[] = 'Nama minimal 3 karakter.';
 }
 
 if ($tempat === '') {
-  $errors[] = 'Tempat tinggal wajib diisi.';
+  $errors_bio[] = 'Tempat tinggal wajib diisi.';
 }
 
 if ($tanggal === '') {
-  $errors[] = 'Tanggal lahir wajib diisi.';
+  $errors_bio[] = 'Tanggal lahir wajib diisi.';
 }
 
 if ($hobi === '') {
-  $errors[] = 'Hobi wajib diisi.';
+  $errors_bio[] = 'Hobi wajib diisi.';
 }
 
 if ($pekerjaan === '') {
-  $errors[] = 'Pekerjaan wajib diisi.';
+  $errors_bio[] = 'Pekerjaan wajib diisi.';
 }
 
 if ($pasangan === '') {
-  $errors[] = 'Pasangan wajib diisi.';
+  $errors_bio[] = 'Pasangan wajib diisi.';
 }
 
 if ($ortu === '') {
-  $errors[] = 'Nama orang tua wajib diisi.';
+  $errors_bio[] = 'Nama orang tua wajib diisi.';
 }
 
 if ($kakak === '') {
-  $errors[] = 'Nama kakak wajib diisi.';
+  $errors_bio[] = 'Nama kakak wajib diisi.';
 }
 
 if ($adik === '') {
-  $errors[] = 'Nama adik wajib diisi.';
+  $errors_bio[] = 'Nama adik wajib diisi.';
 }
 
 if ($chapchoi === '') {
-  $errors[] = 'Captcha wajib diisi.';
+  $errors_bio[] = 'Captcha wajib diisi.';
 }
 
 if ($chapchoi !== '11') {
-  $errors[] = 'Jawaban '. $chapchoi.' captcha salah.';
+  $errors_bio[] = 'Jawaban '. $chapchoi.' captcha salah.';
 }
 
 /*
 kondisi di bawah ini hanya dikerjakan jika ada error, 
 simpan nilai lama dan pesan error, lalu redirect (konsep PRG)
 */
-if (!empty($errors)) {
+if (!empty($errors_bio)) {
   $_SESSION['old_bio'] = [
     'nim' => $nim,
     'namalengkap' => $namalengkap,
@@ -97,7 +97,7 @@ if (!empty($errors)) {
     'chapchoi' => $chapchoi,
   ];
 
-  $_SESSION['flash_error_bio'] = implode('<br>', $errors);
+  $_SESSION['flash_error_bio'] = implode('<br>', $errors_bio);
   redirect_ke('index.php#biodata');
 }
 
