@@ -10,4 +10,6 @@ Telah:<br>
     <li>ekstrak bahan uas</li>
     <li>hapus index.html</li>
     <li>buat tabel tbl_biodata di database</li>
+    <li>insert 1 record data di tbl_biodata</li>
+
 </ol>
