@@ -95,7 +95,7 @@
     /*
       Redirect balik ke read_bio.php dan tampilkan info sukses.
     */
-    $_SESSION['flash_sukses'] = 'Terima kasih, data Anda sudah diperbaharui.';
+    $_SESSION['flash_sukses_bio'] = 'Terima kasih, data Anda sudah diperbaharui.';
     redirect_ke('read_bio.php'); #pola PRG: kembali ke data dan exit()
   } else { #jika gagal, simpan kembali old value dan tampilkan error umum
     $_SESSION['old'] = [
