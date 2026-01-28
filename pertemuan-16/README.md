@@ -11,5 +11,6 @@ Telah:<br>
     <li>hapus index.html</li>
     <li>buat tbl_dosen</li>
     <li>copas proses.php ke dalam proses_bio.php</li>
+    <li>menyesuaikan variabel2 dalam proses_bio.php agar sesuai dengan biodata dosen</li>
 
 </ol>
