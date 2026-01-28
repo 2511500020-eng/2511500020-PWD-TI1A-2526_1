@@ -41,8 +41,8 @@
     <th>Alamat Rumah</th>
     <th>Tanggal Jadi Dosen</th>
     <th>JJA Dosen</th>
-    <th>Prodi</th>
     <th>Nomor HP</th>
+    <th>Prodi</th>
     <th>Pasangan</th>
     <th>Anak</th>
     <th>Bidang Ilmu Dosen</th>
