@@ -111,7 +111,7 @@
 
   <main>
     <section id="biodata">
-      <h2>Edit Biodata</h2>
+      <h2>Edit Biodata Dosen</h2>
 
       <?php if (!empty($flash_error_bio)): ?>
         <div style="padding:10px; margin-bottom:10px; background:#f8d7da; color:#721c24; border-radius:6px">

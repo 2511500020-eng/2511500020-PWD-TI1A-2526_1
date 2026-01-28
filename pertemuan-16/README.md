@@ -23,5 +23,6 @@ Telah:<br>
     <li>copy paste edit.php dan rename jadi edit_bio.php</li>
     <li>menyesuaikan variabel sesuai biodata</li>
     <li>mengedit nama form dan prefill</li>
+    <li>type hidden di bagian id</li>
 
 </ol>
