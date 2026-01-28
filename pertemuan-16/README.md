@@ -31,5 +31,6 @@ Telah:<br>
     <li>ganti tujuan link</li>
     <li>konfirmasi hapus</li>
     <li>readonly di bagian edit kode dosen</li>
+    <li>narok file sql</li>
 
 </ol>
