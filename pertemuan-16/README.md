@@ -8,5 +8,6 @@ Telah:<br>
 <br>
 <ol>
     <li>ekstrak bahan uas</li>
-    
+    <li>hapus index.html</li>
+
 </ol>
