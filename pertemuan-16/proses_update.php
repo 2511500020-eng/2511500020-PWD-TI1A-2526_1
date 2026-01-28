@@ -66,8 +66,7 @@
     $_SESSION['old'] = [
       'nama'  => $nama,
       'email' => $email,
-      'pesan' => $pesan,
-      'captcha' => $captcha
+      'pesan' => $pesan
     ];
 
     $_SESSION['flash_error'] = implode('<br>', $errors);
@@ -103,7 +102,6 @@
       'nama'  => $nama,
       'email' => $email,
       'pesan' => $pesan,
-      'captcha' => $captcha
     ];
     $_SESSION['flash_error'] = 'Data gagal diperbaharui. Silakan coba lagi.';
     redirect_ke('edit.php?cid='. (int)$cid);
