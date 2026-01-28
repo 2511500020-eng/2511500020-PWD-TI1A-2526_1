@@ -16,5 +16,6 @@ Telah:<br>
     <li>menampilkan nilai old jika ada error</li>
     <li>copas read_inc.php dan rename jadi read_inc_bio.php</li>
     <li>menampilkan read_inc_bio.php di bagian tentang saya</li>
+    <li>copas read.php dan rename jadi read_bio.php</li>
 
 </ol>
