@@ -15,5 +15,6 @@ Telah:<br>
     <li>menampilkan flash error dan sukses di form</li>
     <li>menampilkan nilai old jika ada error</li>
     <li>copas read_inc.php dan rename jadi read_inc_bio.php</li>
+    <li>menampilkan read_inc_bio.php di bagian tentang saya</li>
 
 </ol>
