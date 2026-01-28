@@ -29,5 +29,6 @@ Telah:<br>
     <li>copas proses_delete.php ke dalam proses_delete_bio.php</li>
     <li>menyesuaikan variabel sesuai biodata dosen</li>
     <li>ganti tujuan link</li>
+    <li>konfirmasi hapus</li>
 
 </ol>
