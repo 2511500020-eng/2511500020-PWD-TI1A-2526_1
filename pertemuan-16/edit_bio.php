@@ -123,44 +123,44 @@
 
         <input type="hidden" name="did" value="<?= (int)$did; ?>">
     
-        <label for="txtKodeDos"><span>NIM:</span>
+        <label for="txtKodeDos"><span>Kode Dosen:</span>
           <input type="text" id="txtKodeDos" name="txtKodeDosEd" readonly required value="<?= !empty($dkode) ? $dkode : '' ?>">
         </label>
 
-        <label for="txtNmDosen"><span>Nama Lengkap:</span>
-          <input type="text" id="txtNmDosen" name="txtNmDosenEd" placeholder="Masukkan Nama" required value="<?= !empty($dnama) ? $dnama : '' ?>">
+        <label for="txtNmDosen"><span>Nama Dosen:</span>
+          <input type="text" id="txtNmDosen" name="txtNmDosenEd" placeholder="Masukkan Nama Dosen" required value="<?= !empty($dnama) ? $dnama : '' ?>">
         </label>
 
-        <label for="txtAlRmh"><span>Tempat Lahir:</span>
-          <input type="text" id="txtAlRmh" name="txtAlRmhEd" placeholder="Masukkan Tempat Lahir" required value="<?= !empty($dalamat) ? $dalamat : '' ?>">
+        <label for="txtAlRmh"><span>Alamat Rumah:</span>
+          <input type="text" id="txtAlRmh" name="txtAlRmhEd" placeholder="Masukkan Alamat Rumah" required value="<?= !empty($dalamat) ? $dalamat : '' ?>">
         </label>
 
-        <label for="txtTglDosen"><span>Tanggal Lahir:</span>
-          <input type="text" id="txtTglDosen" name="txtTglDosenEd" placeholder="Masukkan Tanggal Lahir" required value="<?= !empty($dtanggal) ? $dtanggal : '' ?>">
+        <label for="txtTglDosen"><span>Tanggal Jadi Dosen:</span>
+          <input type="text" id="txtTglDosen" name="txtTglDosenEd" placeholder="Masukkan Tanggal Jadi Dosen" required value="<?= !empty($dtanggal) ? $dtanggal : '' ?>">
         </label>
 
-        <label for="txtJJA"><span>Hobi:</span>
-          <input type="text" id="txtJJA" name="txtJJAEd" placeholder="Masukkan Hobi" required value="<?= !empty($djja) ? $djja : '' ?>">
+        <label for="txtJJA"><span>JJA Dosen:</span>
+          <input type="text" id="txtJJA" name="txtJJAEd" placeholder="Masukkan JJA Dosen" required value="<?= !empty($djja) ? $djja : '' ?>">
         </label>
 
-        <label for="txtNoHP"><span>Pasangan:</span>
-          <input type="text" id="txtNoHP" name="txtNoHPEd" placeholder="Masukkan Pasangan" required value="<?= !empty($dprodi) ? $dprodi : '' ?>">
+        <label for="txtProdi"><span>Homebase Prodi:</span>
+          <input type="text" id="txtProdi" name="txtProdiEd" placeholder="Masukkan Homebase Prodi" required value="<?= !empty($dprodi) ? $dprodi : '' ?>">
         </label>
 
-        <label for="txtProdi"><span>Pekerjaan:</span>
-          <input type="text" id="txtProdi" name="txtProdiEd" placeholder="Masukkan Pekerjaan" required value="<?= !empty($dnohp) ? $dnohp : '' ?>">
+        <label for="txtNoHP"><span>Nomor HP:</span>
+          <input type="text" id="txtNoHP" name="txtNoHPEd" placeholder="Masukkan Nomor HP" required value="<?= !empty($dnohp) ? $dnohp : '' ?>">
         </label>
 
-        <label for="txNamaPasangan"><span>Nama Orang Tua:</span>
+        <label for="txNamaPasangan"><span>Nama Pasangan:</span>
           <input type="text" id="txNamaPasangan" name="txNamaPasanganEd" placeholder="Masukkan Nama Orang Tua" required value="<?= !empty($dpasangan) ? $dpasangan : '' ?>">
         </label>
 
-        <label for="txtNmAnak"><span>Nama Kakak:</span>
+        <label for="txtNmAnak"><span>Nama Anak:</span>
           <input type="text" id="txtNmAnak" name="txtNmAnakEd" placeholder="Masukkan Nama Kakak" required value="<?= !empty($danak) ? $danak : '' ?>">
         </label>
 
-        <label for="txtBidangIlmu"><span>Nama Adik:</span>
-          <input type="text" id="txtBidangIlmu" name="txtBidangIlmuEd" placeholder="Masukkan Nama Adik" required value="<?= !empty($dbilmu) ? $dbilmu : '' ?>">
+        <label for="txtBidangIlmu"><span>Bidang Ilmu Dosen:</span>
+          <input type="text" id="txtBidangIlmu" name="txtBidangIlmuEd" placeholder="Masukkan Bidang Ilmu Dosen" required value="<?= !empty($dbilmu) ? $dbilmu : '' ?>">
         </label>
 
         <button type="submit">Kirim</button>

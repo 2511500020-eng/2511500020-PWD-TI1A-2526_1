@@ -32,5 +32,6 @@ Telah:<br>
     <li>konfirmasi hapus</li>
     <li>readonly di bagian edit kode dosen</li>
     <li>narok file sql</li>
+    <li>edit form edit</li>
 
 </ol>
