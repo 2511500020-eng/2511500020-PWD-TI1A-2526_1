@@ -13,5 +13,6 @@ Telah:<br>
     <li>copas proses.php ke dalam proses_bio.php</li>
     <li>menyesuaikan variabel2 dalam proses_bio.php agar sesuai dengan biodata dosen</li>
     <li>menampilkan flash error dan sukses di form</li>
+    <li>menampilkan milai old jika ada error</li>
 
 </ol>
