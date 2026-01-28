@@ -24,5 +24,6 @@ Telah:<br>
     <li>menyesuaikan variabel sesuai biodata</li>
     <li>mengedit nama form dan prefill</li>
     <li>type hidden di bagian id</li>
+    <li>copas proses_update.php ke dalam proses_update_bio.php</li>
 
 </ol>
