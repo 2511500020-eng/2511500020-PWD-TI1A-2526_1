@@ -9,7 +9,7 @@
     'options' => ['min_range' => 1] artinya id harus ≥ 1 
     (bukan 0, bahkan bukan negatif, bukan huruf, bukan HTML).
   */
-  $pid = filter_input(INPUT_GET, 'pid', FILTER_VALIDATE_INT, [
+  $did = filter_input(INPUT_GET, 'did', FILTER_VALIDATE_INT, [
     'options' => ['min_range' => 1]
   ]);
   /*
@@ -29,8 +29,8 @@
     kembalikan pengguna ke halaman awal (read_bio.php) sembari 
     mengirim penanda error.
   */
-  if (!$pid) {
-    $_SESSION['flash_error_pengunjung'] = 'Akses tidak valid.';
+  if (!$did) {
+    $_SESSION['flash_error_bio'] = 'Akses tidak valid.';
     redirect_ke('read_bio.php');
   }
 
@@ -38,51 +38,51 @@
     Ambil data lama dari DB menggunakan prepared statement, 
     jika ada kesalahan, tampilkan penanda error.
   */
-    $stmt = mysqli_prepare($conn, "SELECT pid, pkode, pnama, ptempat, ptanggal, phobi, ppekerjaan, ppasangan, portu, pkakak, padik
-                                    FROM tbl_pengunjung WHERE pid = ? LIMIT 1");
+    $stmt = mysqli_prepare($conn, "SELECT did, dkode, dnama, dalamat, dtanggal, djja, dnohp, dprodi, dpasangan, danak, dbilmu
+                                    FROM tbl_dosen WHERE did = ? LIMIT 1");
   if (!$stmt) {
-    $_SESSION['flash_error_pengunjung'] = 'Query tidak benar.';
+    $_SESSION['flash_error_bio'] = 'Query tidak benar.';
     redirect_ke('read_bio.php');
   }
 
-  mysqli_stmt_bind_param($stmt, "i", $pid);
+  mysqli_stmt_bind_param($stmt, "i", $did);
   mysqli_stmt_execute($stmt);
   $res = mysqli_stmt_get_result($stmt);
   $row = mysqli_fetch_assoc($res);
   mysqli_stmt_close($stmt);
 
   if (!$row) {
-    $_SESSION['flash_error_pengunjung'] = 'Record tidak ditemukan.';
+    $_SESSION['flash_error_bio'] = 'Record tidak ditemukan.';
     redirect_ke('read_bio.php');
   }
 
   #Nilai awal (prefill form)
-  $pkode = $row["pkode"] ?? "";
-  $pnama = $row["pnama"] ?? "";
-  $ptempat = $row["ptempat"] ?? "";
-  $ptanggal = $row["ptanggal"] ?? "";
-  $phobi = $row["phobi"] ?? "";
-  $ppasangan = $row["ppasangan"] ?? "";
-  $ppekerjaan = $row["ppekerjaan"] ?? "";
-  $portu = $row["portu"] ?? "";
-  $pkakak = $row["pkakak"] ?? "";
-  $padik = $row["padik"] ?? "";
+  $dkode = $row["dkode"] ?? "";
+  $dnama = $row["dnama"] ?? "";
+  $dalamat = $row["dalamat"] ?? "";
+  $dtanggal = $row["dtanggal"] ?? "";
+  $djja = $row["djja"] ?? "";
+  $dprodi = $row["dprodi"] ?? "";
+  $dnohp = $row["dnohp"] ?? "";
+  $dpasangan = $row["dpasangan"] ?? "";
+  $danak = $row["danak"] ?? "";
+  $dbilmu = $row["dbilmu"] ?? "";
 
   #Ambil error dan nilai old input kalau ada
-  $flash_error_pengunjung = $_SESSION['flash_error_pengunjung'] ?? '';
-  $old_pengunjung = $_SESSION['old_pengunjung'] ?? [];
-  unset($_SESSION['flash_error_pengunjung'], $_SESSION['old_pengunjung']);
-  if (!empty($old_pengunjung)) {
-    $pkode = $old_pengunjung["pkode"] ?? $pkode;
-    $pnama = $old_pengunjung["pnama"] ?? $pnama;
-    $ptempat = $old_pengunjung["ptempat"] ?? $ptempat;
-    $ptanggal = $old_pengunjung["ptanggal"] ?? $ptanggal;
-    $phobi = $old_pengunjung["phobi"] ?? $phobi;
-    $ppasangan = $old_pengunjung["ppasangan"] ?? $ppasangan;
-    $ppekerjaan = $old_pengunjung["ppekerjaan"] ?? $ppekerjaan;
-    $portu = $old_pengunjung["portu"] ?? $portu;
-    $pkakak = $old_pengunjung["pkakak"] ?? $pkakak;
-    $padik = $old_pengunjung["padik"] ?? $padik;
+  $flash_error_bio = $_SESSION['flash_error_bio'] ?? '';
+  $old_bio = $_SESSION['old_bio'] ?? [];
+  unset($_SESSION['flash_error_bio'], $_SESSION['old_bio']);
+  if (!empty($old_bio)) {
+    $dkode = $old_bio["dkode"] ?? $dkode;
+    $dnama = $old_bio["dnama"] ?? $dnama;
+    $dalamat = $old_bio["dalamat"] ?? $dalamat;
+    $dtanggal = $old_bio["dtanggal"] ?? $dtanggal;
+    $djja = $old_bio["djja"] ?? $djja;
+    $dprodi = $old_bio["dprodi"] ?? $dprodi;
+    $dnohp = $old_bio["dnohp"] ?? $dnohp;
+    $dpasangan = $old_bio["dpasangan"] ?? $dpasangan;
+    $danak = $old_bio["danak"] ?? $danak;
+    $dbilmu = $old_bio["dbilmu"] ?? $dbilmu;
   }
 ?>
 
@@ -113,54 +113,54 @@
     <section id="biodata">
       <h2>Edit Biodata</h2>
 
-      <?php if (!empty($flash_error_pengunjung)): ?>
+      <?php if (!empty($flash_error_bio)): ?>
         <div style="padding:10px; margin-bottom:10px; background:#f8d7da; color:#721c24; border-radius:6px">
-          <?= $flash_error_pengunjung; ?>  
+          <?= $flash_error_bio; ?>  
         </div>
       <?php endif; ?>
 
       <form action="proses_update_bio.php" method="POST">
 
-        <input type="hidden" name="pid" value="<?= (int)$pid; ?>">
+        <input type="hidden" name="did" value="<?= (int)$did; ?>">
     
-        <label for="txtKode"><span>NIM:</span>
-          <input type="number" id="txtKode" name="txtKodeEd" readonly required value="<?= !empty($pkode) ? $pkode : '' ?>">
+        <label for="txtKodeDos"><span>NIM:</span>
+          <input type="text" id="txtKodeDos" name="txtKodeDosEd" readonly required value="<?= !empty($dkode) ? $dkode : '' ?>">
         </label>
 
-        <label for="txtNmPengunjung"><span>Nama Lengkap:</span>
-          <input type="text" id="txtNmPengunjung" name="txtNmPengunjungEd" placeholder="Masukkan Nama" required value="<?= !empty($pnama) ? $pnama : '' ?>">
+        <label for="txtNmDosen"><span>Nama Lengkap:</span>
+          <input type="text" id="txtNmDosen" name="txtNmDosenEd" placeholder="Masukkan Nama" required value="<?= !empty($dnama) ? $dnama : '' ?>">
         </label>
 
-        <label for="txtT4LhrPengunjung"><span>Tempat Lahir:</span>
-          <input type="text" id="txtT4LhrPengunjung" name="txtT4LhrPengunjungEd" placeholder="Masukkan Tempat Lahir" required value="<?= !empty($ptempat) ? $ptempat : '' ?>">
+        <label for="txtAlRmh"><span>Tempat Lahir:</span>
+          <input type="text" id="txtAlRmh" name="txtAlRmhEd" placeholder="Masukkan Tempat Lahir" required value="<?= !empty($dalamat) ? $dalamat : '' ?>">
         </label>
 
-        <label for="txtTglLhrPengunjung"><span>Tanggal Lahir:</span>
-          <input type="text" id="txtTglLhrPengunjung" name="txtTglLhrPengunjungEd" placeholder="Masukkan Tanggal Lahir" required value="<?= !empty($ptanggal) ? $ptanggal : '' ?>">
+        <label for="txtTglDosen"><span>Tanggal Lahir:</span>
+          <input type="text" id="txtTglDosen" name="txtTglDosenEd" placeholder="Masukkan Tanggal Lahir" required value="<?= !empty($dtanggal) ? $dtanggal : '' ?>">
         </label>
 
-        <label for="txtHobiPengunjung"><span>Hobi:</span>
-          <input type="text" id="txtHobiPengunjung" name="txtHobiPengunjungEd" placeholder="Masukkan Hobi" required value="<?= !empty($phobi) ? $phobi : '' ?>">
+        <label for="txtJJA"><span>Hobi:</span>
+          <input type="text" id="txtJJA" name="txtJJAEd" placeholder="Masukkan Hobi" required value="<?= !empty($djja) ? $djja : '' ?>">
         </label>
 
-        <label for="txtPasanganPengunjung"><span>Pasangan:</span>
-          <input type="text" id="txtPasanganPengunjung" name="txtPasanganPengunjungEd" placeholder="Masukkan Pasangan" required value="<?= !empty($ppasangan) ? $ppasangan : '' ?>">
+        <label for="txtNoHP"><span>Pasangan:</span>
+          <input type="text" id="txtNoHP" name="txtNoHPEd" placeholder="Masukkan Pasangan" required value="<?= !empty($dprodi) ? $dprodi : '' ?>">
         </label>
 
-        <label for="txtKerjaPengunjung"><span>Pekerjaan:</span>
-          <input type="text" id="txtKerjaPengunjung" name="txtKerjaPengunjungEd" placeholder="Masukkan Pekerjaan" required value="<?= !empty($ppekerjaan) ? $ppekerjaan : '' ?>">
+        <label for="txtProdi"><span>Pekerjaan:</span>
+          <input type="text" id="txtProdi" name="txtProdiEd" placeholder="Masukkan Pekerjaan" required value="<?= !empty($dnohp) ? $dnohp : '' ?>">
         </label>
 
-        <label for="txtNmOrtuPengunjung"><span>Nama Orang Tua:</span>
-          <input type="text" id="txtNmOrtuPengunjung" name="txtNmOrtuPengunjungEd" placeholder="Masukkan Nama Orang Tua" required value="<?= !empty($portu) ? $portu : '' ?>">
+        <label for="txNamaPasangan"><span>Nama Orang Tua:</span>
+          <input type="text" id="txNamaPasangan" name="txNamaPasanganEd" placeholder="Masukkan Nama Orang Tua" required value="<?= !empty($dpasangan) ? $dpasangan : '' ?>">
         </label>
 
-        <label for="txtNmKakakPengunjung"><span>Nama Kakak:</span>
-          <input type="text" id="txtNmKakakPengunjung" name="txtNmKakakPengunjungEd" placeholder="Masukkan Nama Kakak" required value="<?= !empty($pkakak) ? $pkakak : '' ?>">
+        <label for="txtNmAnak"><span>Nama Kakak:</span>
+          <input type="text" id="txtNmAnak" name="txtNmAnakEd" placeholder="Masukkan Nama Kakak" required value="<?= !empty($danak) ? $danak : '' ?>">
         </label>
 
-        <label for="txtNmAdikPengunjung"><span>Nama Adik:</span>
-          <input type="text" id="txtNmAdikPengunjung" name="txtNmAdikPengunjungEd" placeholder="Masukkan Nama Adik" required value="<?= !empty($padik) ? $padik : '' ?>">
+        <label for="txtBidangIlmu"><span>Nama Adik:</span>
+          <input type="text" id="txtBidangIlmu" name="txtBidangIlmuEd" placeholder="Masukkan Nama Adik" required value="<?= !empty($dbilmu) ? $dbilmu : '' ?>">
         </label>
 
         <button type="submit">Kirim</button>

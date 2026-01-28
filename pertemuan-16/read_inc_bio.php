@@ -2,19 +2,19 @@
 require 'koneksi.php';
 
 $fieldBiodata = [
-      "pkode" => ["label" => "NIM:", "suffix" => ""],
-      "pnama" => ["label" => "Nama Lengkap:", "suffix" => ""],
-      "ptempat" => ["label" => "Tempat Lahir:", "suffix" => ""],
-      "ptanggal" => ["label" => "Tanggal Lahir:", "suffix" => ""],
-      "phobi" => ["label" => "Hobi:", "suffix" => ""],
-      "ppasangan" => ["label" => "Pasangan:", "suffix" => ""],
-      "ppekerjaan" => ["label" => "Pekerjaan:", "suffix" => ""],
-      "portu" => ["label" => "Nama Orang Tua:", "suffix" => ""],
-      "pkakak" => ["label" => "Nama Kakak:", "suffix" => ""],
-      "padik" => ["label" => "Nama Adik:", "suffix" => ""],
+      "dkode" => ["label" => "NIM:", "suffix" => ""],
+      "dnama" => ["label" => "Nama Lengkap:", "suffix" => ""],
+      "dalamat" => ["label" => "Tempat Lahir:", "suffix" => ""],
+      "dtanggal" => ["label" => "Tanggal Lahir:", "suffix" => ""],
+      "djja" => ["label" => "Hobi:", "suffix" => ""],
+      "dprodi" => ["label" => "Pasangan:", "suffix" => ""],
+      "dnohp" => ["label" => "Pekerjaan:", "suffix" => ""],
+      "dpasangan" => ["label" => "Nama Orang Tua:", "suffix" => ""],
+      "danak" => ["label" => "Nama Kakak:", "suffix" => ""],
+      "dbilmu" => ["label" => "Nama Adik:", "suffix" => ""],
     ];
 
-$sql = "SELECT * FROM tbl_pengunjung ORDER BY pid DESC";
+$sql = "SELECT * FROM tbl_dosen ORDER BY did DESC";
 $q = mysqli_query($conn, $sql);
 if (!$q) {
     echo "<p>Gagal membaca data biodata: " . htmlspecialchars(mysqli_error($conn)) . "</p>";
@@ -23,16 +23,16 @@ if (!$q) {
 } else {
     while ($row = mysqli_fetch_assoc($q)) {
         $arrBiodata = [
-            "pkode" => $row["pkode"] ?? "",
-            "pnama" => $row["pnama"] ?? "",
-            "ptempat" => $row["ptempat"] ?? "",
-            "ptanggal" => $row["ptanggal"] ?? "",
-            "phobi" => $row["phobi"] ?? "",
-            "ppasangan" => $row["ppasangan"] ?? "",
-            "ppekerjaan" => $row["ppekerjaan"] ?? "",
-            "portu" => $row["portu"] ?? "",
-            "pkakak" => $row["pkakak"] ?? "",
-            "padik" => $row["padik"] ?? "",
+            "dkode" => $row["dkode"] ?? "",
+            "dnama" => $row["dnama"] ?? "",
+            "dalamat" => $row["dalamat"] ?? "",
+            "dtanggal" => $row["dtanggal"] ?? "",
+            "djja" => $row["djja"] ?? "",
+            "dprodi" => $row["dprodi"] ?? "",
+            "dnohp" => $row["dnohp"] ?? "",
+            "dpasangan" => $row["dpasangan"] ?? "",
+            "danak" => $row["danak"] ?? "",
+            "dbilmu" => $row["dbilmu"] ?? "",
         ];
     echo tampilkanBiodata($fieldBiodata, $arrBiodata);
     }

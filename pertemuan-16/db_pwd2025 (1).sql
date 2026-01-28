@@ -24,21 +24,21 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_pengunjung`
+-- Table structure for table `tbl_dosen`
 --
 
-CREATE TABLE `tbl_pengunjung` (
-  `pid` int(11) NOT NULL,
-  `pkode` varchar(10) DEFAULT NULL,
-  `pnama` varchar(50) DEFAULT NULL,
-  `ptempat` varchar(100) DEFAULT NULL,
-  `ptanggal` varchar(20) DEFAULT NULL,
-  `phobi` varchar(100) DEFAULT NULL,
-  `ppasangan` varchar(100) DEFAULT NULL,
-  `ppekerjaan` varchar(100) DEFAULT NULL,
-  `portu` varchar(100) DEFAULT NULL,
-  `pkakak` varchar(100) DEFAULT NULL,
-  `padik` varchar(100) DEFAULT NULL
+CREATE TABLE `tbl_dosen` (
+  `did` int(11) NOT NULL,
+  `dkode` varchar(10) DEFAULT NULL,
+  `dnama` varchar(50) DEFAULT NULL,
+  `dalamat` varchar(100) DEFAULT NULL,
+  `dtanggal` varchar(20) DEFAULT NULL,
+  `djja` varchar(100) DEFAULT NULL,
+  `dprodi` varchar(100) DEFAULT NULL,
+  `dnohp` varchar(100) DEFAULT NULL,
+  `dpasangan` varchar(100) DEFAULT NULL,
+  `danak` varchar(100) DEFAULT NULL,
+  `dbilmu` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -46,20 +46,20 @@ CREATE TABLE `tbl_pengunjung` (
 --
 
 --
--- Indexes for table `tbl_pengunjung`
+-- Indexes for table `tbl_dosen`
 --
-ALTER TABLE `tbl_pengunjung`
-  ADD PRIMARY KEY (`pid`);
+ALTER TABLE `tbl_dosen`
+  ADD PRIMARY KEY (`did`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `tbl_pengunjung`
+-- AUTO_INCREMENT for table `tbl_dosen`
 --
-ALTER TABLE `tbl_pengunjung`
-  MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `tbl_dosen`
+  MODIFY `did` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -5,99 +5,99 @@
 
   #cek method form, hanya izinkan POST
   if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    $_SESSION['flash_error_pengunjung'] = 'Akses tidak valid.';
+    $_SESSION['flash_error_bio'] = 'Akses tidak valid.';
     redirect_ke('read_bio.php');
   }
 
   #validasi id wajib angka dan > 0
-  $pid = filter_input(INPUT_POST, 'pid', FILTER_VALIDATE_INT, [
+  $did = filter_input(INPUT_POST, 'did', FILTER_VALIDATE_INT, [
     'options' => ['min_range' => 1]
   ]);
 
-  if (!$pid) {
-    $_SESSION['flash_error_pengunjung'] = 'pid Tidak Valid.';
-    redirect_ke('edit_bio.php?pid='. (int)$pid);
+  if (!$did) {
+    $_SESSION['flash_error_bio'] = 'did Tidak Valid.';
+    redirect_ke('edit_bio.php?did='. (int)$did);
   }
 
   #ambil dan bersihkan (sanitasi) nilai dari form
-  $pkode = bersihkan($_POST['txtKodeEd'] ?? '');
-  $pnama = bersihkan($_POST['txtNmPengunjungEd'] ?? '');
-  $ptempat = bersihkan($_POST['txtT4LhrPengunjungEd'] ?? '');
-  $ptanggal = bersihkan($_POST['txtTglLhrPengunjungEd'] ?? '');
-  $phobi = bersihkan($_POST['txtHobiPengunjungEd'] ?? '');
-  $ppekerjaan = bersihkan($_POST['txtKerjaPengunjungEd'] ?? '');
-  $ppasangan = bersihkan($_POST['txtPasanganPengunjungEd'] ?? '');
-  $portu = bersihkan($_POST['txtNmOrtuPengunjungEd'] ?? '');
-  $pkakak = bersihkan($_POST['txtNmKakakPengunjungEd'] ?? '');
-  $padik = bersihkan($_POST['txtNmAdikPengunjungEd'] ?? '');
+  $dkode = bersihkan($_POST['txtKodeDosEd'] ?? '');
+  $dnama = bersihkan($_POST['txtNmDosenEd'] ?? '');
+  $dalamat = bersihkan($_POST['txtAlRmhEd'] ?? '');
+  $dtanggal = bersihkan($_POST['txtTglDosenEd'] ?? '');
+  $djja = bersihkan($_POST['txtJJAEd'] ?? '');
+  $dnohp = bersihkan($_POST['txtProdiEd'] ?? '');
+  $dprodi = bersihkan($_POST['txtNoHPEd'] ?? '');
+  $dpasangan = bersihkan($_POST['txNamaPasanganEd'] ?? '');
+  $danak = bersihkan($_POST['txtNmAnakEd'] ?? '');
+  $dbilmu = bersihkan($_POST['txtBidangIlmuEd'] ?? '');
 
   #Validasi sederhana
-  $errors_pengunjung = []; #ini array untuk menampung semua error yang ada
+  $errors_bio = []; #ini array untuk menampung semua error yang ada
 
-  if ($pkode === '') {
-    $errors_pengunjung[] = 'NIM wajib diisi.';
+  if ($dkode === '') {
+    $errors_bio[] = 'NIM wajib diisi.';
   }
 
-  if ($pnama === '') {
-    $errors_pengunjung[] = 'Nama wajib diisi.';
+  if ($dnama === '') {
+    $errors_bio[] = 'Nama wajib diisi.';
   }
 
-  if (mb_strlen($pnama) < 3) {
-    $errors_pengunjung[] = 'Nama minimal 3 karakter.';
+  if (mb_strlen($dnama) < 3) {
+    $errors_bio[] = 'Nama minimal 3 karakter.';
   }
 
-  if ($ptempat === '') {
-    $errors_pengunjung[] = 'Tempat tinggal wajib diisi.';
+  if ($dalamat === '') {
+    $errors_bio[] = 'Tempat tinggal wajib diisi.';
   }
 
-  if ($ptanggal === '') {
-    $errors_pengunjung[] = 'Tanggal lahir wajib diisi.';
+  if ($dtanggal === '') {
+    $errors_bio[] = 'Tanggal lahir wajib diisi.';
   }
 
-  if ($phobi === '') {
-    $errors_pengunjung[] = 'Hobi wajib diisi.';
+  if ($djja === '') {
+    $errors_bio[] = 'Hobi wajib diisi.';
   }
 
-  if ($ppekerjaan === '') {
-    $errors_pengunjung[] = 'Pekerjaan wajib diisi.';
+  if ($dnohp === '') {
+    $errors_bio[] = 'Pekerjaan wajib diisi.';
   }
 
-  if ($ppasangan === '') {
-    $errors_pengunjung[] = 'Pasangan wajib diisi.';
+  if ($dprodi === '') {
+    $errors_bio[] = 'Pasangan wajib diisi.';
   }
 
-  if ($portu === '') {
-    $errors_pengunjung[] = 'Nama orang tua wajib diisi.';
+  if ($dpasangan === '') {
+    $errors_bio[] = 'Nama orang tua wajib diisi.';
   }
 
-  if ($pkakak === '') {
-    $errors_pengunjung[] = 'Nama pkakak wajib diisi.';
+  if ($danak === '') {
+    $errors_bio[] = 'Nama danak wajib diisi.';
   }
 
-  if ($padik === '') {
-    $errors_pengunjung[] = 'Nama padik wajib diisi.';
+  if ($dbilmu === '') {
+    $errors_bio[] = 'Nama dbilmu wajib diisi.';
   }
 
   /*
   kondisi di bawah ini hanya dikerjakan jika ada error, 
   simpan nilai lama dan pesan error, lalu redirect (konsep PRG)
   */
-  if (!empty($errors_pengunjung)) {
-    $_SESSION['old_pengunjung'] = [
-      'pkode' => $pkode,
-      'pnama' => $pnama,
-      'ptempat' => $ptempat,
-      'ptanggal' => $ptanggal,
-      'phobi' => $phobi,
-      'ppekerjaan' => $ppekerjaan,
-      'ppasangan' => $ppasangan,
-      'portu' => $portu,
-      'pkakak' => $pkakak,
-      'padik' => $padik,
+  if (!empty($errors_bio)) {
+    $_SESSION['old_bio'] = [
+      'dkode' => $dkode,
+      'dnama' => $dnama,
+      'dalamat' => $dalamat,
+      'dtanggal' => $dtanggal,
+      'djja' => $djja,
+      'dnohp' => $dnohp,
+      'dprodi' => $dprodi,
+      'dpasangan' => $dpasangan,
+      'danak' => $danak,
+      'dbilmu' => $dbilmu,
     ];
 
-    $_SESSION['flash_error_pengunjung'] = implode('<br>', $errors_pengunjung);
-    redirect_ke('edit_bio.php?pid='. (int)$pid);
+    $_SESSION['flash_error_bio'] = implode('<br>', $errors_bio);
+    redirect_ke('edit_bio.php?did='. (int)$did);
   }
 
   /*
@@ -105,41 +105,41 @@
     menyiapkan query UPDATE dengan prepared statement 
     (WAJIB WHERE id = ?)
   */
-  $stmt = mysqli_prepare($conn, "UPDATE tbl_pengunjung 
-                                SET pkode = ?, pnama = ?, ptempat = ?, ptanggal = ?, phobi = ?, ppekerjaan = ?, ppasangan = ?, portu = ?, pkakak = ?, padik = ?
-                                WHERE pid = ?");
+  $stmt = mysqli_prepare($conn, "UPDATE tbl_dosen 
+                                SET dkode = ?, dnama = ?, dalamat = ?, dtanggal = ?, djja = ?, dnohp = ?, dprodi = ?, dpasangan = ?, danak = ?, dbilmu = ?
+                                WHERE did = ?");
   if (!$stmt) {
     #jika gagal prepare, kirim pesan error (tanpa detail sensitif)
-    $_SESSION['flash_error_pengunjung'] = 'Terjadi kesalahan sistem (prepare gagal).';
-    redirect_ke('edit_bio.php?pid='. (int)$pid);
+    $_SESSION['flash_error_bio'] = 'Terjadi kesalahan sistem (prepare gagal).';
+    redirect_ke('edit_bio.php?did='. (int)$did);
   }
 
   #bind parameter dan eksekusi (s = string, i = integer)
-  mysqli_stmt_bind_param($stmt, "ssssssssssi", $pkode, $pnama, $ptempat, $ptanggal, $phobi, $ppekerjaan, $ppasangan, $portu, $pkakak, $padik, $pid);
+  mysqli_stmt_bind_param($stmt, "ssssssssssi", $dkode, $dnama, $dalamat, $dtanggal, $djja, $dnohp, $dprodi, $dpasangan, $danak, $dbilmu, $did);
   if (mysqli_stmt_execute($stmt)) { #jika berhasil, kosongkan old value
-    unset($_SESSION['old_pengunjung']);
+    unset($_SESSION['old_bio']);
     /*
       Redirect balik ke read_bio.php dan tampilkan info sukses.
     */
-    $_SESSION['flash_sukses_pengunjung'] = 'Terima kasih, data Anda sudah diperbaharui.';
+    $_SESSION['flash_sukses_bio'] = 'Terima kasih, data Anda sudah diperbaharui.';
     redirect_ke('read_bio.php'); #pola PRG: kembali ke data dan exit()
   } else { #jika gagal, simpan kembali old value dan tampilkan error umum
-    $_SESSION['old_pengunjung'] = [
-      'pkode' => $pkode,
-      'pnama' => $pnama,
-      'ptempat' => $ptempat,
-      'ptanggal' => $ptanggal,
-      'phobi' => $phobi,
-      'ppekerjaan' => $ppekerjaan,
-      'ppasangan' => $ppasangan,
-      'portu' => $portu,
-      'pkakak' => $pkakak,
-      'padik' => $padik,
+    $_SESSION['old_bio'] = [
+      'dkode' => $dkode,
+      'dnama' => $dnama,
+      'dalamat' => $dalamat,
+      'dtanggal' => $dtanggal,
+      'djja' => $djja,
+      'dnohp' => $dnohp,
+      'dprodi' => $dprodi,
+      'dpasangan' => $dpasangan,
+      'danak' => $danak,
+      'dbilmu' => $dbilmu,
     ];
-    $_SESSION['flash_error_pengunjung'] = 'Data gagal diperbaharui. Silakan coba lagi.';
-    redirect_ke('edit_bio.php?pid='. (int)$pid);
+    $_SESSION['flash_error_bio'] = 'Data gagal diperbaharui. Silakan coba lagi.';
+    redirect_ke('edit_bio.php?did='. (int)$did);
   }
   #tutup statement
   mysqli_stmt_close($stmt);
 
-  redirect_ke('edit_bio.php?pid='. (int)$pid);
+  redirect_ke('edit_bio.php?did='. (int)$did);

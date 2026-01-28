@@ -9,5 +9,6 @@ Telah:<br>
 <ol>
     <li>ekstrak bahan uas</li>
     <li>hapus index.html</li>
+    <li>buat tbl_dosen</li>
 
 </ol>
