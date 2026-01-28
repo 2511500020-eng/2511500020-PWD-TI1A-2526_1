@@ -10,5 +10,6 @@ Telah:<br>
     <li>ekstrak bahan uas</li>
     <li>hapus index.html</li>
     <li>buat tbl_dosen</li>
+    <li>copas proses.php ke dalam proses_bio.php</li>
 
 </ol>
