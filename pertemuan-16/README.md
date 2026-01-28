@@ -20,5 +20,6 @@ Telah:<br>
     <li>membuat nama kolom</li>
     <li>membuat isi kolom</li>
     <li>menyesuaikan variabel sesuai biodata</li>
+    <li>copy paste edit.php dan rename jadi edit_bio.php</li>
 
 </ol>
