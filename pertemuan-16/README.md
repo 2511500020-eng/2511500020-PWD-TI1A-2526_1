@@ -19,5 +19,6 @@ Telah:<br>
     <li>copas read.php dan rename jadi read_bio.php</li>
     <li>membuat nama kolom</li>
     <li>membuat isi kolom</li>
+    <li>menyesuaikan variabel sesuai biodata</li>
 
 </ol>
