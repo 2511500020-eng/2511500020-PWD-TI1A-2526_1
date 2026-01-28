@@ -18,5 +18,6 @@ Telah:<br>
     <li>menampilkan read_inc_bio.php di bagian tentang saya</li>
     <li>copas read.php dan rename jadi read_bio.php</li>
     <li>membuat nama kolom</li>
+    <li>membuat isi kolom</li>
 
 </ol>
