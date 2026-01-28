@@ -22,5 +22,6 @@ Telah:<br>
     <li>menyesuaikan variabel sesuai biodata</li>
     <li>copy paste edit.php dan rename jadi edit_bio.php</li>
     <li>menyesuaikan variabel sesuai biodata</li>
+    <li>mengedit nama form dan prefill</li>
 
 </ol>
