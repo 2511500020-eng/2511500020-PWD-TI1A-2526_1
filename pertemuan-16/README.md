@@ -26,5 +26,6 @@ Telah:<br>
     <li>type hidden di bagian id</li>
     <li>copas proses_update.php ke dalam proses_update_bio.php</li>
     <li>menyesuaikan variabel sesuai biodata dosen</li>
+    <li>copas proses_delete.php ke dalam proses_delete_bio.php</li>
 
 </ol>
