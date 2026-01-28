@@ -30,5 +30,6 @@ Telah:<br>
     <li>menyesuaikan variabel sesuai biodata dosen</li>
     <li>ganti tujuan link</li>
     <li>konfirmasi hapus</li>
+    <li>readonly di bagian edit kode dosen</li>
 
 </ol>
